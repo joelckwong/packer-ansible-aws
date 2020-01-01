@@ -1,0 +1,99 @@
+---
+- name: Tomcat deployment playbook
+  hosts: 'all'
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Add EPEL repository
+      yum:
+        name: epel-release
+        state: present
+
+    - name: Update all packages
+      yum:
+        name: "*"
+        state: latest
+
+    - name: Install basic packages
+      yum:
+        name: ['epel-release', 'firewalld', 'vim', 'bash-completion', 'htop', 'tmux', 'screen', 'telnet', 'tree', 'wget', 'curl', 'git', 'python-firewall']
+        state: present
+
+    - name: Install Java
+      yum:
+        name: java-1.8.0-openjdk
+        state: present
+
+    - name: Add tomcat group
+      group:
+        name: tomcat
+
+    - name: Add "tomcat" user
+      user:
+        name: tomcat
+        group: tomcat
+        home: /usr/share/tomcat
+        createhome: no
+        system: yes
+
+    - name: Download Tomcat
+      get_url:
+        url: https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.41/bin/apache-tomcat-8.5.41.tar.gz
+        dest: /tmp/apache-tomcat-8.5.41.tar.gz
+
+    - name: Create a tomcat directory
+      file:
+        path: /usr/share/tomcat
+        state: directory
+        owner: tomcat
+        group: tomcat
+
+    - name: Extract tomcat archive
+      unarchive:
+        src: /tmp/apache-tomcat-8.5.41.tar.gz
+        dest: /usr/share/tomcat
+        owner: tomcat
+        group: tomcat
+        remote_src: yes
+        extra_opts: "--strip-components=1"
+        creates: /usr/share/tomcat/bin
+
+    - name: Copy tomcat service file
+      template:
+        src: templates/tomcat.service.j2
+        dest: /etc/systemd/system/tomcat.service
+
+    - name: Start and enable tomcat
+      service:
+        daemon_reload: yes
+        name: tomcat
+        state: started
+        enabled: yes
+
+    - name: Start and enable firewalld
+      service:
+        name: firewalld
+        state: started
+        enabled: yes
+
+    - name: Open tomcat port on the firewall
+      firewalld:
+        port: 8080/tcp
+        permanent: true
+        state: enabled
+        immediate: yes
+      when: "ansible_os_family == 'RedHat' and ansible_distribution_major_version == '7'"
+
+  handlers:
+    - name: restart tomcat
+      service:
+        name: tomcat
+        state: restarted
+
+- name: Run ansible-role-rhel7-stig role
+  hosts: 'all'
+  become: yes
+  become_method: sudo
+  roles:
+  - { role: ansible-role-rhel7-stig }
+  ignore_errors: yes
