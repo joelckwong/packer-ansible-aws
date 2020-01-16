@@ -95,5 +95,5 @@
   become: yes
   become_method: sudo
   roles:
-  - { role: ansible-role-rhel7-stig }
+  - { role: ansible-role-rhel7-pci-dss }
   ignore_errors: yes
