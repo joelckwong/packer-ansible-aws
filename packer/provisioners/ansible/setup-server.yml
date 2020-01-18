@@ -90,7 +90,7 @@
         name: tomcat
         state: restarted
 
-- name: Run ansible-role-rhel7-stig role
+- name: Run ansible-role-rhel7-pci-dss role
   hosts: 'all'
   become: yes
   become_method: sudo
