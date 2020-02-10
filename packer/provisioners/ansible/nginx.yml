@@ -1,0 +1,44 @@
+---
+- name: Nginx deployment playbook
+  hosts: 'all'
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Add epel-release repo
+      yum:
+        name: epel-release
+        state: present
+
+    - name: Install nginx
+      yum:
+        name: nginx
+        state: present
+
+    - name: Insert Index Page
+      template:
+        src: index.html
+        dest: /usr/share/nginx/html/index.html
+
+    - name: Start NGiNX
+      service:
+        name: nginx
+        state: started
+
+    - name: Start and enable firewalld
+      service:
+        name: firewalld
+        state: started
+        enabled: yes
+
+    - name: Open nginx port on the firewall
+      firewalld:
+        port: 443/tcp
+        permanent: true
+        state: enabled
+        immediate: yes
+      when: "ansible_os_family == 'RedHat' and ansible_distribution_major_version == '7'"
+
+  handlers:
+    - name: restart nginx
+      service:
+        name: nginx

@@ -1,0 +1,1053 @@
+1579387669,,ui,say,==> amazon-ebs: Force Deregister flag found%!(PACKER_COMMA) skipping prevalidating AMI Name
+1579387671,,ui,message,    amazon-ebs: Found Image ID: ami-02eac2c0129f6376b
+1579387671,,ui,say,==> amazon-ebs: Creating temporary keypair: packer_5e238b14-6445-fef2-7138-2e9a9a5631a4
+1579387671,,ui,say,==> amazon-ebs: Creating temporary security group for this instance: packer_5e238b17-fe03-2d86-edbf-0f1e7bbaf270
+1579387672,,ui,say,==> amazon-ebs: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...
+1579387672,,ui,say,==> amazon-ebs: Launching a source AWS instance...
+1579387672,,ui,say,==> amazon-ebs: Adding tags to source instance
+1579387672,,ui,message,    amazon-ebs: Adding tag: "Name": "packer-build-image"
+1579387674,,ui,message,    amazon-ebs: Instance ID: i-05da2b9e9b192d171
+1579387674,,ui,say,==> amazon-ebs: Waiting for instance (i-05da2b9e9b192d171) to become ready...
+1579387689,,ui,say,==> amazon-ebs: Using ssh communicator to connect: 35.175.239.121
+1579387689,,ui,say,==> amazon-ebs: Waiting for SSH to become available...
+1579387761,,ui,say,==> amazon-ebs: Connected to SSH!
+1579387761,,ui,say,==> amazon-ebs: Provisioning with shell script: /tmp/packer-shell099540904
+1579387761,,ui,message,    amazon-ebs:
+1579387761,,ui,message,    amazon-ebs: Disk /dev/nvme1n1: 68.7 GB%!(PACKER_COMMA) 68719476736 bytes%!(PACKER_COMMA) 134217728 sectors
+1579387761,,ui,message,    amazon-ebs: Units = sectors of 1 * 512 = 512 bytes
+1579387761,,ui,message,    amazon-ebs: Sector size (logical/physical): 512 bytes / 512 bytes
+1579387761,,ui,message,    amazon-ebs: I/O size (minimum/optimal): 512 bytes / 512 bytes
+1579387761,,ui,message,    amazon-ebs:
+1579387761,,ui,message,    amazon-ebs:
+1579387761,,ui,message,    amazon-ebs: Disk /dev/nvme0n1: 68.7 GB%!(PACKER_COMMA) 68719476736 bytes%!(PACKER_COMMA) 134217728 sectors
+1579387761,,ui,message,    amazon-ebs: Units = sectors of 1 * 512 = 512 bytes
+1579387761,,ui,message,    amazon-ebs: Sector size (logical/physical): 512 bytes / 512 bytes
+1579387761,,ui,message,    amazon-ebs: I/O size (minimum/optimal): 512 bytes / 512 bytes
+1579387761,,ui,message,    amazon-ebs: Disk label type: dos
+1579387761,,ui,message,    amazon-ebs: Disk identifier: 0x000b956b
+1579387761,,ui,error,==> amazon-ebs: Device does not contain a recognized partition table
+1579387761,,ui,error,==> amazon-ebs: Building a new DOS disklabel with disk identifier 0xc1e2e5aa.
+1579387761,,ui,error,==> amazon-ebs: Building a new DOS disklabel with disk identifier 0x858384a5.
+1579387761,,ui,message,    amazon-ebs:
+1579387761,,ui,message,    amazon-ebs:         Device Boot      Start         End      Blocks   Id  System
+1579387761,,ui,message,    amazon-ebs: /dev/nvme0n1p1   *        2048   134217694    67107823+  83  Linux
+1579387761,,ui,message,    amazon-ebs: Welcome to fdisk (util-linux 2.23.2).
+1579387761,,ui,message,    amazon-ebs:
+1579387761,,ui,message,    amazon-ebs: Changes will remain in memory only%!(PACKER_COMMA) until you decide to write them.
+1579387761,,ui,message,    amazon-ebs: Be careful before using the write command.
+1579387761,,ui,message,    amazon-ebs:
+1579387761,,ui,message,    amazon-ebs:
+1579387761,,ui,message,    amazon-ebs: Command (m for help):
+1579387761,,ui,message,    amazon-ebs: Command (m for help): Partition type:
+1579387761,,ui,message,    amazon-ebs:    p   primary (0 primary%!(PACKER_COMMA) 0 extended%!(PACKER_COMMA) 4 free)
+1579387761,,ui,message,    amazon-ebs:    e   extended
+1579387761,,ui,message,    amazon-ebs: Select (default p): Partition number (1-4%!(PACKER_COMMA) default 1): First sector (2048-134217727%!(PACKER_COMMA) default 2048): Using default value 2048
+1579387761,,ui,message,    amazon-ebs: Last sector%!(PACKER_COMMA) +sectors or +size{K%!(PACKER_COMMA)M%!(PACKER_COMMA)G} (2048-134217727%!(PACKER_COMMA) default 134217727): Using default value 134217727
+1579387761,,ui,message,    amazon-ebs: Partition 1 of type Linux and of size 64 GiB is set
+1579387761,,ui,message,    amazon-ebs:
+1579387761,,ui,message,    amazon-ebs: Command (m for help): The partition table has been altered!
+1579387761,,ui,message,    amazon-ebs:
+1579387761,,ui,message,    amazon-ebs: Calling ioctl() to re-read partition table.
+1579387761,,ui,message,    amazon-ebs: Syncing disks.
+1579387764,,ui,message,    amazon-ebs: meta-data=/dev/nvme1n1p1         isize=512    agcount=4%!(PACKER_COMMA) agsize=4194240 blks
+1579387764,,ui,message,    amazon-ebs:          =                       sectsz=512   attr=2%!(PACKER_COMMA) projid32bit=1
+1579387764,,ui,message,    amazon-ebs:          =                       crc=1        finobt=0%!(PACKER_COMMA) sparse=0
+1579387764,,ui,message,    amazon-ebs: data     =                       bsize=4096   blocks=16776960%!(PACKER_COMMA) imaxpct=25
+1579387764,,ui,message,    amazon-ebs:          =                       sunit=0      swidth=0 blks
+1579387764,,ui,message,    amazon-ebs: naming   =version 2              bsize=4096   ascii-ci=0 ftype=1
+1579387764,,ui,message,    amazon-ebs: log      =internal log           bsize=4096   blocks=8191%!(PACKER_COMMA) version=2
+1579387764,,ui,message,    amazon-ebs:          =                       sectsz=512   sunit=0 blks%!(PACKER_COMMA) lazy-count=1
+1579387764,,ui,message,    amazon-ebs: realtime =none                   extsz=4096   blocks=0%!(PACKER_COMMA) rtextents=0
+1579387764,,ui,message,    amazon-ebs: /dev/nvme1n1p1 /opt xfs defaults 1 2
+1579387764,,ui,message,    amazon-ebs: restorecon reset /opt context system_u:object_r:unlabeled_t:s0->system_u:object_r:usr_t:s0
+1579387764,,ui,say,==> amazon-ebs: Provisioning with shell script: /tmp/packer-shell023998921
+1579387764,,ui,say,==> amazon-ebs: Provisioning with shell script: ./provisioners/scripts/bootstrap.sh
+1579387765,,ui,error,==> amazon-ebs: + sudo yum install -y epel-release
+1579387765,,ui,message,    amazon-ebs: Loaded plugins: fastestmirror
+1579387765,,ui,message,    amazon-ebs: Determining fastest mirrors
+1579387766,,ui,message,    amazon-ebs:  * base: repos-va.psychz.net
+1579387766,,ui,message,    amazon-ebs:  * extras: repos-va.psychz.net
+1579387766,,ui,message,    amazon-ebs:  * updates: repos-va.psychz.net
+1579387768,,ui,message,    amazon-ebs: Resolving Dependencies
+1579387768,,ui,message,    amazon-ebs: --> Running transaction check
+1579387768,,ui,message,    amazon-ebs: ---> Package epel-release.noarch 0:7-11 will be installed
+1579387768,,ui,message,    amazon-ebs: --> Finished Dependency Resolution
+1579387769,,ui,message,    amazon-ebs:
+1579387769,,ui,message,    amazon-ebs: Dependencies Resolved
+1579387769,,ui,message,    amazon-ebs:
+1579387769,,ui,message,    amazon-ebs: ================================================================================
+1579387769,,ui,message,    amazon-ebs:  Package                Arch             Version         Repository        Size
+1579387769,,ui,message,    amazon-ebs: ================================================================================
+1579387769,,ui,message,    amazon-ebs: Installing:
+1579387769,,ui,message,    amazon-ebs:  epel-release           noarch           7-11            extras            15 k
+1579387769,,ui,message,    amazon-ebs:
+1579387769,,ui,message,    amazon-ebs: Transaction Summary
+1579387769,,ui,message,    amazon-ebs: ================================================================================
+1579387769,,ui,message,    amazon-ebs: Install  1 Package
+1579387769,,ui,message,    amazon-ebs:
+1579387769,,ui,message,    amazon-ebs: Total download size: 15 k
+1579387769,,ui,message,    amazon-ebs: Installed size: 24 k
+1579387769,,ui,message,    amazon-ebs: Downloading packages:
+1579387769,,ui,message,    amazon-ebs: Public key for epel-release-7-11.noarch.rpm is not installed
+1579387769,,ui,error,==> amazon-ebs: warning: /var/cache/yum/x86_64/7/extras/packages/epel-release-7-11.noarch.rpm: Header V3 RSA/SHA256 Signature%!(PACKER_COMMA) key ID f4a80eb5: NOKEY
+1579387769,,ui,message,    amazon-ebs: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+1579387769,,ui,error,==> amazon-ebs: Importing GPG key 0xF4A80EB5:
+1579387769,,ui,error,==> amazon-ebs:  Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+1579387769,,ui,error,==> amazon-ebs:  Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+1579387769,,ui,error,==> amazon-ebs:  Package    : centos-release-7-6.1810.2.el7.centos.x86_64 (installed)
+1579387769,,ui,error,==> amazon-ebs:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+1579387769,,ui,message,    amazon-ebs: Running transaction check
+1579387769,,ui,message,    amazon-ebs: Running transaction test
+1579387769,,ui,message,    amazon-ebs: Transaction test succeeded
+1579387769,,ui,message,    amazon-ebs: Running transaction
+1579387769,,ui,message,    amazon-ebs:   Installing : epel-release-7-11.noarch                                     1/1
+1579387769,,ui,message,    amazon-ebs:   Verifying  : epel-release-7-11.noarch                                     1/1
+1579387769,,ui,message,    amazon-ebs:
+1579387769,,ui,message,    amazon-ebs: Installed:
+1579387769,,ui,message,    amazon-ebs:   epel-release.noarch 0:7-11
+1579387769,,ui,message,    amazon-ebs:
+1579387769,,ui,message,    amazon-ebs: Complete!
+1579387769,,ui,error,==> amazon-ebs: + sudo yum install -y ansible
+1579387769,,ui,message,    amazon-ebs: Loaded plugins: fastestmirror
+1579387769,,ui,message,    amazon-ebs: Loading mirror speeds from cached hostfile
+1579387770,,ui,message,    amazon-ebs:  * base: repos-va.psychz.net
+1579387770,,ui,message,    amazon-ebs:  * epel: mirror.umd.edu
+1579387770,,ui,message,    amazon-ebs:  * extras: repos-va.psychz.net
+1579387770,,ui,message,    amazon-ebs:  * updates: repos-va.psychz.net
+1579387800,,ui,error,==> amazon-ebs: http://csc.mcs.sdsmt.edu/epel/7/x86_64/repodata/46cc9fd30d74aa85733dafca22cbe71db5fd8ec3ade0a483ee0d6365c1646a9c-updateinfo.xml.bz2: [Errno 12] Timeout on http://csc.mcs.sdsmt.edu/epel/7/x86_64/repodata/46cc9fd30d74aa85733dafca22cbe71db5fd8ec3ade0a483ee0d6365c1646a9c-updateinfo.xml.bz2: (28%!(PACKER_COMMA) 'Operation too slow. Less than 1000 bytes/sec transferred the last 30 seconds')
+1579387800,,ui,error,==> amazon-ebs: Trying other mirror.
+1579387803,,ui,message,    amazon-ebs: Resolving Dependencies
+1579387803,,ui,message,    amazon-ebs: --> Running transaction check
+1579387803,,ui,message,    amazon-ebs: ---> Package ansible.noarch 0:2.9.2-1.el7 will be installed
+1579387803,,ui,message,    amazon-ebs: --> Processing Dependency: python-httplib2 for package: ansible-2.9.2-1.el7.noarch
+1579387803,,ui,message,    amazon-ebs: --> Processing Dependency: python-paramiko for package: ansible-2.9.2-1.el7.noarch
+1579387803,,ui,message,    amazon-ebs: --> Processing Dependency: python2-cryptography for package: ansible-2.9.2-1.el7.noarch
+1579387803,,ui,message,    amazon-ebs: --> Processing Dependency: python2-jmespath for package: ansible-2.9.2-1.el7.noarch
+1579387803,,ui,message,    amazon-ebs: --> Processing Dependency: sshpass for package: ansible-2.9.2-1.el7.noarch
+1579387803,,ui,message,    amazon-ebs: --> Running transaction check
+1579387803,,ui,message,    amazon-ebs: ---> Package python-httplib2.noarch 0:0.9.2-1.el7 will be installed
+1579387803,,ui,message,    amazon-ebs: ---> Package python-paramiko.noarch 0:2.1.1-9.el7 will be installed
+1579387803,,ui,message,    amazon-ebs: --> Processing Dependency: python2-pyasn1 for package: python-paramiko-2.1.1-9.el7.noarch
+1579387803,,ui,message,    amazon-ebs: ---> Package python2-cryptography.x86_64 0:1.7.2-2.el7 will be installed
+1579387803,,ui,message,    amazon-ebs: --> Processing Dependency: python-idna >= 2.0 for package: python2-cryptography-1.7.2-2.el7.x86_64
+1579387803,,ui,message,    amazon-ebs: --> Processing Dependency: python-cffi >= 1.4.1 for package: python2-cryptography-1.7.2-2.el7.x86_64
+1579387803,,ui,message,    amazon-ebs: --> Processing Dependency: python-enum34 for package: python2-cryptography-1.7.2-2.el7.x86_64
+1579387803,,ui,message,    amazon-ebs: ---> Package python2-jmespath.noarch 0:0.9.0-3.el7 will be installed
+1579387803,,ui,message,    amazon-ebs: ---> Package sshpass.x86_64 0:1.06-2.el7 will be installed
+1579387803,,ui,message,    amazon-ebs: --> Running transaction check
+1579387803,,ui,message,    amazon-ebs: ---> Package python-cffi.x86_64 0:1.6.0-5.el7 will be installed
+1579387803,,ui,message,    amazon-ebs: --> Processing Dependency: python-pycparser for package: python-cffi-1.6.0-5.el7.x86_64
+1579387803,,ui,message,    amazon-ebs: ---> Package python-enum34.noarch 0:1.0.4-1.el7 will be installed
+1579387803,,ui,message,    amazon-ebs: ---> Package python-idna.noarch 0:2.4-1.el7 will be installed
+1579387803,,ui,message,    amazon-ebs: ---> Package python2-pyasn1.noarch 0:0.1.9-7.el7 will be installed
+1579387803,,ui,message,    amazon-ebs: --> Running transaction check
+1579387803,,ui,message,    amazon-ebs: ---> Package python-pycparser.noarch 0:2.14-1.el7 will be installed
+1579387803,,ui,message,    amazon-ebs: --> Processing Dependency: python-ply for package: python-pycparser-2.14-1.el7.noarch
+1579387803,,ui,message,    amazon-ebs: --> Running transaction check
+1579387803,,ui,message,    amazon-ebs: ---> Package python-ply.noarch 0:3.4-11.el7 will be installed
+1579387803,,ui,message,    amazon-ebs: --> Finished Dependency Resolution
+1579387803,,ui,message,    amazon-ebs:
+1579387803,,ui,message,    amazon-ebs: Dependencies Resolved
+1579387803,,ui,message,    amazon-ebs:
+1579387803,,ui,message,    amazon-ebs: ================================================================================
+1579387803,,ui,message,    amazon-ebs:  Package                    Arch         Version             Repository    Size
+1579387803,,ui,message,    amazon-ebs: ================================================================================
+1579387803,,ui,message,    amazon-ebs: Installing:
+1579387803,,ui,message,    amazon-ebs:  ansible                    noarch       2.9.2-1.el7         epel          17 M
+1579387803,,ui,message,    amazon-ebs: Installing for dependencies:
+1579387803,,ui,message,    amazon-ebs:  python-cffi                x86_64       1.6.0-5.el7         base         218 k
+1579387803,,ui,message,    amazon-ebs:  python-enum34              noarch       1.0.4-1.el7         base          52 k
+1579387803,,ui,message,    amazon-ebs:  python-httplib2            noarch       0.9.2-1.el7         extras       115 k
+1579387803,,ui,message,    amazon-ebs:  python-idna                noarch       2.4-1.el7           base          94 k
+1579387803,,ui,message,    amazon-ebs:  python-paramiko            noarch       2.1.1-9.el7         base         269 k
+1579387803,,ui,message,    amazon-ebs:  python-ply                 noarch       3.4-11.el7          base         123 k
+1579387803,,ui,message,    amazon-ebs:  python-pycparser           noarch       2.14-1.el7          base         104 k
+1579387803,,ui,message,    amazon-ebs:  python2-cryptography       x86_64       1.7.2-2.el7         base         502 k
+1579387803,,ui,message,    amazon-ebs:  python2-jmespath           noarch       0.9.0-3.el7         extras        39 k
+1579387803,,ui,message,    amazon-ebs:  python2-pyasn1             noarch       0.1.9-7.el7         base         100 k
+1579387803,,ui,message,    amazon-ebs:  sshpass                    x86_64       1.06-2.el7          extras        21 k
+1579387803,,ui,message,    amazon-ebs:
+1579387803,,ui,message,    amazon-ebs: Transaction Summary
+1579387803,,ui,message,    amazon-ebs: ================================================================================
+1579387803,,ui,message,    amazon-ebs: Install  1 Package (+11 Dependent packages)
+1579387803,,ui,message,    amazon-ebs:
+1579387803,,ui,message,    amazon-ebs: Total download size: 19 M
+1579387803,,ui,message,    amazon-ebs: Installed size: 112 M
+1579387803,,ui,message,    amazon-ebs: Downloading packages:
+1579387804,,ui,error,==> amazon-ebs: warning: /var/cache/yum/x86_64/7/epel/packages/ansible-2.9.2-1.el7.noarch.rpm: Header V3 RSA/SHA256 Signature%!(PACKER_COMMA) key ID 352c64e5: NOKEY
+1579387804,,ui,message,    amazon-ebs: Public key for ansible-2.9.2-1.el7.noarch.rpm is not installed
+1579387804,,ui,message,    amazon-ebs: --------------------------------------------------------------------------------
+1579387804,,ui,message,    amazon-ebs: Total                                               25 MB/s |  19 MB  00:00
+1579387804,,ui,message,    amazon-ebs: Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+1579387804,,ui,error,==> amazon-ebs: Importing GPG key 0x352C64E5:
+1579387804,,ui,error,==> amazon-ebs:  Userid     : "Fedora EPEL (7) <epel@fedoraproject.org>"
+1579387804,,ui,error,==> amazon-ebs:  Fingerprint: 91e9 7d7c 4a5e 96f1 7f3e 888f 6a2f aea2 352c 64e5
+1579387804,,ui,error,==> amazon-ebs:  Package    : epel-release-7-11.noarch (@extras)
+1579387804,,ui,error,==> amazon-ebs:  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+1579387804,,ui,message,    amazon-ebs: Running transaction check
+1579387804,,ui,message,    amazon-ebs: Running transaction test
+1579387804,,ui,message,    amazon-ebs: Transaction test succeeded
+1579387804,,ui,message,    amazon-ebs: Running transaction
+1579387805,,ui,message,    amazon-ebs:   Installing : python2-pyasn1-0.1.9-7.el7.noarch                           1/12
+1579387805,,ui,message,    amazon-ebs:   Installing : python-enum34-1.0.4-1.el7.noarch                            2/12
+1579387805,,ui,message,    amazon-ebs:   Installing : python-httplib2-0.9.2-1.el7.noarch                          3/12
+1579387805,,ui,message,    amazon-ebs:   Installing : sshpass-1.06-2.el7.x86_64                                   4/12
+1579387805,,ui,message,    amazon-ebs:   Installing : python2-jmespath-0.9.0-3.el7.noarch                         5/12
+1579387805,,ui,message,    amazon-ebs:   Installing : python-ply-3.4-11.el7.noarch                                6/12
+1579387805,,ui,message,    amazon-ebs:   Installing : python-pycparser-2.14-1.el7.noarch                          7/12
+1579387805,,ui,message,    amazon-ebs:   Installing : python-cffi-1.6.0-5.el7.x86_64                              8/12
+1579387805,,ui,message,    amazon-ebs:   Installing : python-idna-2.4-1.el7.noarch                                9/12
+1579387805,,ui,message,    amazon-ebs:   Installing : python2-cryptography-1.7.2-2.el7.x86_64                    10/12
+1579387815,,ui,message,    amazon-ebs:   Installing : python-paramiko-2.1.1-9.el7.noarch                         11/12
+1579387816,,ui,message,    amazon-ebs:   Installing : ansible-2.9.2-1.el7.noarch                                 12/12
+1579387816,,ui,message,    amazon-ebs:   Verifying  : python-idna-2.4-1.el7.noarch                                1/12
+1579387816,,ui,message,    amazon-ebs:   Verifying  : python-pycparser-2.14-1.el7.noarch                          2/12
+1579387816,,ui,message,    amazon-ebs:   Verifying  : python-ply-3.4-11.el7.noarch                                3/12
+1579387816,,ui,message,    amazon-ebs:   Verifying  : python-paramiko-2.1.1-9.el7.noarch                          4/12
+1579387816,,ui,message,    amazon-ebs:   Verifying  : python2-jmespath-0.9.0-3.el7.noarch                         5/12
+1579387816,,ui,message,    amazon-ebs:   Verifying  : python-cffi-1.6.0-5.el7.x86_64                              6/12
+1579387816,,ui,message,    amazon-ebs:   Verifying  : ansible-2.9.2-1.el7.noarch                                  7/12
+1579387816,,ui,message,    amazon-ebs:   Verifying  : sshpass-1.06-2.el7.x86_64                                   8/12
+1579387816,,ui,message,    amazon-ebs:   Verifying  : python-httplib2-0.9.2-1.el7.noarch                          9/12
+1579387816,,ui,message,    amazon-ebs:   Verifying  : python2-pyasn1-0.1.9-7.el7.noarch                          10/12
+1579387816,,ui,message,    amazon-ebs:   Verifying  : python-enum34-1.0.4-1.el7.noarch                           11/12
+1579387816,,ui,message,    amazon-ebs:   Verifying  : python2-cryptography-1.7.2-2.el7.x86_64                    12/12
+1579387816,,ui,message,    amazon-ebs:
+1579387816,,ui,message,    amazon-ebs: Installed:
+1579387816,,ui,message,    amazon-ebs:   ansible.noarch 0:2.9.2-1.el7
+1579387816,,ui,message,    amazon-ebs:
+1579387816,,ui,message,    amazon-ebs: Dependency Installed:
+1579387816,,ui,message,    amazon-ebs:   python-cffi.x86_64 0:1.6.0-5.el7
+1579387816,,ui,message,    amazon-ebs:   python-enum34.noarch 0:1.0.4-1.el7
+1579387816,,ui,message,    amazon-ebs:   python-httplib2.noarch 0:0.9.2-1.el7
+1579387816,,ui,message,    amazon-ebs:   python-idna.noarch 0:2.4-1.el7
+1579387816,,ui,message,    amazon-ebs:   python-paramiko.noarch 0:2.1.1-9.el7
+1579387816,,ui,message,    amazon-ebs:   python-ply.noarch 0:3.4-11.el7
+1579387816,,ui,message,    amazon-ebs:   python-pycparser.noarch 0:2.14-1.el7
+1579387816,,ui,message,    amazon-ebs:   python2-cryptography.x86_64 0:1.7.2-2.el7
+1579387816,,ui,message,    amazon-ebs:   python2-jmespath.noarch 0:0.9.0-3.el7
+1579387816,,ui,message,    amazon-ebs:   python2-pyasn1.noarch 0:0.1.9-7.el7
+1579387816,,ui,message,    amazon-ebs:   sshpass.x86_64 0:1.06-2.el7
+1579387816,,ui,message,    amazon-ebs:
+1579387816,,ui,message,    amazon-ebs: Complete!
+1579387816,,ui,say,==> amazon-ebs: Provisioning with Ansible...
+1579387816,,ui,say,==> amazon-ebs: Executing Ansible: *****a*****n*****s*****i*****b*****l*****e*****-*****p*****l*****a*****y*****b*****o*****o*****k***** *****-*****-*****e*****x*****t*****r*****a*****-*****v*****a*****r*****s***** *****p*****a*****c*****k*****e*****r*****_*****b*****u*****i*****l*****d*****_*****n*****a*****m*****e*****=*****a*****m*****a*****z*****o*****n*****-*****e*****b*****s***** *****p*****a*****c*****k*****e*****r*****_*****b*****u*****i*****l*****d*****e*****r*****_*****t*****y*****p*****e*****=*****a*****m*****a*****z*****o*****n*****-*****e*****b*****s***** *****-*****o***** *****I*****d*****e*****n*****t*****i*****t*****i*****e*****s*****O*****n*****l*****y*****=*****y*****e*****s***** *****-*****i***** *****/*****t*****m*****p*****/*****p*****a*****c*****k*****e*****r*****-*****p*****r*****o*****v*****i*****s*****i*****o*****n*****e*****r*****-*****a*****n*****s*****i*****b*****l*****e*****0*****6*****7*****6*****3*****3*****8*****0*****2***** *****/*****h*****o*****m*****e*****/*****j*****k*****w*****o*****n*****g*****/*****r*****e*****p*****o*****s*****/*****p*****a*****c*****k*****e*****r*****-*****a*****n*****s*****i*****b*****l*****e*****-*****a*****w*****s*****/*****p*****a*****c*****k*****e*****r*****/*****p*****r*****o*****v*****i*****s*****i*****o*****n*****e*****r*****s*****/*****a*****n*****s*****i*****b*****l*****e*****/*****s*****e*****t*****u*****p*****-*****s*****e*****r*****v*****e*****r*****.*****y*****m*****l***** *****-*****e***** *****a*****n*****s*****i*****b*****l*****e*****_*****s*****s*****h*****_*****p*****r*****i*****v*****a*****t*****e*****_*****k*****e*****y*****_*****f*****i*****l*****e*****=*****/*****t*****m*****p*****/*****a*****n*****s*****i*****b*****l*****e*****-*****k*****e*****y*****6*****3*****1*****2*****0*****6*****9*****3*****5*****
+1579387819,,ui,message,    amazon-ebs:
+1579387819,,ui,message,    amazon-ebs: PLAY [Centos7 deployment playbook] *********************************************
+1579387819,,ui,message,    amazon-ebs:
+1579387819,,ui,message,    amazon-ebs: TASK [Gathering Facts] *********************************************************
+1579387821,,ui,message,    amazon-ebs: ok: [default]
+1579387821,,ui,message,    amazon-ebs:
+1579387821,,ui,message,    amazon-ebs: TASK [Add EPEL repository] *****************************************************
+1579387823,,ui,message,    amazon-ebs: ok: [default]
+1579387823,,ui,message,    amazon-ebs:
+1579387823,,ui,message,    amazon-ebs: TASK [Update all packages] *****************************************************
+1579387971,,ui,message,    amazon-ebs: changed: [default]
+1579387971,,ui,message,    amazon-ebs:
+1579387971,,ui,message,    amazon-ebs: TASK [Install basic packages] **************************************************
+1579387984,,ui,message,    amazon-ebs: changed: [default]
+1579387984,,ui,message,    amazon-ebs:
+1579387984,,ui,message,    amazon-ebs: TASK [Start and enable firewalld] **********************************************
+1579387987,,ui,message,    amazon-ebs: changed: [default]
+1579387987,,ui,message,    amazon-ebs:
+1579387987,,ui,message,    amazon-ebs: PLAY [Run ansible-role-rhel7-pci-dss role] *************************************
+1579387987,,ui,message,    amazon-ebs:
+1579387987,,ui,message,    amazon-ebs: TASK [Gathering Facts] *********************************************************
+1579387988,,ui,message,    amazon-ebs: ok: [default]
+1579387988,,ui,message,    amazon-ebs:
+1579387988,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Check existence of yum on Fedora] ***********
+1579387988,,ui,message,    amazon-ebs: skipping: [default]
+1579387988,,ui,message,    amazon-ebs:
+1579387988,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure GPG check is globally activated (yum)] ***
+1579387989,,ui,message,    amazon-ebs: changed: [default]
+1579387989,,ui,message,    amazon-ebs: [WARNING]: The value 1 (type int) in a string field was converted to u'1' (type
+1579387989,,ui,message,    amazon-ebs: string). If this does not look like what you expect%!(PACKER_COMMA) quote the entire value to
+1579387989,,ui,message,    amazon-ebs: ensure it does not change.
+1579387989,,ui,message,    amazon-ebs:
+1579387989,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure GPG check is globally activated (dnf)] ***
+1579387989,,ui,message,    amazon-ebs: skipping: [default]
+1579387989,,ui,message,    amazon-ebs:
+1579387989,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Security patches are up to date] ************
+1579387992,,ui,message,    amazon-ebs: ok: [default]
+1579387992,,ui,message,    amazon-ebs:
+1579387992,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Read permission of GPG key directory] *******
+1579387993,,ui,message,    amazon-ebs: ok: [default]
+1579387993,,ui,message,    amazon-ebs:
+1579387993,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Read signatures in GPG key] *****************
+1579387994,,ui,message,    amazon-ebs: fatal: [default]: FAILED! => {"changed": false%!(PACKER_COMMA) "cmd": ["gpg"%!(PACKER_COMMA) "--with-fingerprint"%!(PACKER_COMMA) "--with-colons"%!(PACKER_COMMA) "/etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release"]%!(PACKER_COMMA) "delta": "0:00:00.010687"%!(PACKER_COMMA) "end": "2020-01-18 22:53:14.828452"%!(PACKER_COMMA) "msg": "non-zero return code"%!(PACKER_COMMA) "rc": 2%!(PACKER_COMMA) "start": "2020-01-18 22:53:14.817765"%!(PACKER_COMMA) "stderr": "gpg: directory `/root/.gnupg' created\ngpg: new configuration file `/root/.gnupg/gpg.conf' created\ngpg: WARNING: options in `/root/.gnupg/gpg.conf' are not yet active during this run\ngpg: keyring `/root/.gnupg/secring.gpg' created\ngpg: keyring `/root/.gnupg/pubring.gpg' created\ngpg: can't open `/etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release'"%!(PACKER_COMMA) "stderr_lines": ["gpg: directory `/root/.gnupg' created"%!(PACKER_COMMA) "gpg: new configuration file `/root/.gnupg/gpg.conf' created"%!(PACKER_COMMA) "gpg: WARNING: options in `/root/.gnupg/gpg.conf' are not yet active during this run"%!(PACKER_COMMA) "gpg: keyring `/root/.gnupg/secring.gpg' created"%!(PACKER_COMMA) "gpg: keyring `/root/.gnupg/pubring.gpg' created"%!(PACKER_COMMA) "gpg: can't open `/etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release'"]%!(PACKER_COMMA) "stdout": ""%!(PACKER_COMMA) "stdout_lines": []}
+1579387994,,ui,message,    amazon-ebs: ...ignoring
+1579387994,,ui,message,    amazon-ebs:
+1579387994,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set Fact - Installed GPG Fingerprints] ******
+1579387995,,ui,message,    amazon-ebs: ok: [default]
+1579387995,,ui,message,    amazon-ebs:
+1579387995,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set Fact - Valid fingerprints] **************
+1579387995,,ui,message,    amazon-ebs: ok: [default]
+1579387995,,ui,message,    amazon-ebs:
+1579387995,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Import RedHat GPG key] **********************
+1579387995,,ui,message,    amazon-ebs: skipping: [default]
+1579387995,,ui,message,    amazon-ebs:
+1579387995,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Find All yum Repositories] ******************
+1579387996,,ui,message,    amazon-ebs: ok: [default]
+1579387996,,ui,message,    amazon-ebs:
+1579387996,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure gpgcheck Enabled For All yum Package Repositories] ***
+1579387997,,ui,message,    amazon-ebs: ok: [default] => (item={'uid': 0%!(PACKER_COMMA) 'woth': False%!(PACKER_COMMA) 'mtime': 1567688740.0%!(PACKER_COMMA) 'inode': 12594550%!(PACKER_COMMA) 'isgid': False%!(PACKER_COMMA) 'size': 1664%!(PACKER_COMMA) 'roth': True%!(PACKER_COMMA) 'isuid': False%!(PACKER_COMMA) 'isreg': True%!(PACKER_COMMA) 'pw_name': 'root'%!(PACKER_COMMA) 'gid': 0%!(PACKER_COMMA) 'ischr': False%!(PACKER_COMMA) 'wusr': True%!(PACKER_COMMA) 'xoth': False%!(PACKER_COMMA) 'rusr': True%!(PACKER_COMMA) 'nlink': 1%!(PACKER_COMMA) 'issock': False%!(PACKER_COMMA) 'rgrp': True%!(PACKER_COMMA) 'gr_name': 'root'%!(PACKER_COMMA) 'path': '/etc/yum.repos.d/CentOS-Base.repo'%!(PACKER_COMMA) 'xusr': False%!(PACKER_COMMA) 'atime': 1579387972.9960039%!(PACKER_COMMA) 'isdir': False%!(PACKER_COMMA) 'ctime': 1579387834.4402587%!(PACKER_COMMA) 'isblk': False%!(PACKER_COMMA) 'xgrp': False%!(PACKER_COMMA) 'dev': 66306%!(PACKER_COMMA) 'wgrp': False%!(PACKER_COMMA) 'isfifo': False%!(PACKER_COMMA) 'mode': '0644'%!(PACKER_COMMA) 'islnk': False})
+1579387998,,ui,message,    amazon-ebs: ok: [default] => (item={'uid': 0%!(PACKER_COMMA) 'woth': False%!(PACKER_COMMA) 'mtime': 1567688740.0%!(PACKER_COMMA) 'inode': 12613350%!(PACKER_COMMA) 'isgid': False%!(PACKER_COMMA) 'size': 1309%!(PACKER_COMMA) 'roth': True%!(PACKER_COMMA) 'isuid': False%!(PACKER_COMMA) 'isreg': True%!(PACKER_COMMA) 'pw_name': 'root'%!(PACKER_COMMA) 'gid': 0%!(PACKER_COMMA) 'ischr': False%!(PACKER_COMMA) 'wusr': True%!(PACKER_COMMA) 'xoth': False%!(PACKER_COMMA) 'rusr': True%!(PACKER_COMMA) 'nlink': 1%!(PACKER_COMMA) 'issock': False%!(PACKER_COMMA) 'rgrp': True%!(PACKER_COMMA) 'gr_name': 'root'%!(PACKER_COMMA) 'path': '/etc/yum.repos.d/CentOS-CR.repo'%!(PACKER_COMMA) 'xusr': False%!(PACKER_COMMA) 'atime': 1579387972.999004%!(PACKER_COMMA) 'isdir': False%!(PACKER_COMMA) 'ctime': 1579387834.4402587%!(PACKER_COMMA) 'isblk': False%!(PACKER_COMMA) 'xgrp': False%!(PACKER_COMMA) 'dev': 66306%!(PACKER_COMMA) 'wgrp': False%!(PACKER_COMMA) 'isfifo': False%!(PACKER_COMMA) 'mode': '0644'%!(PACKER_COMMA) 'islnk': False})
+1579387998,,ui,message,    amazon-ebs: ok: [default] => (item={'uid': 0%!(PACKER_COMMA) 'woth': False%!(PACKER_COMMA) 'mtime': 1567688740.0%!(PACKER_COMMA) 'inode': 12613351%!(PACKER_COMMA) 'isgid': False%!(PACKER_COMMA) 'size': 649%!(PACKER_COMMA) 'roth': True%!(PACKER_COMMA) 'isuid': False%!(PACKER_COMMA) 'isreg': True%!(PACKER_COMMA) 'pw_name': 'root'%!(PACKER_COMMA) 'gid': 0%!(PACKER_COMMA) 'ischr': False%!(PACKER_COMMA) 'wusr': True%!(PACKER_COMMA) 'xoth': False%!(PACKER_COMMA) 'rusr': True%!(PACKER_COMMA) 'nlink': 1%!(PACKER_COMMA) 'issock': False%!(PACKER_COMMA) 'rgrp': True%!(PACKER_COMMA) 'gr_name': 'root'%!(PACKER_COMMA) 'path': '/etc/yum.repos.d/CentOS-Debuginfo.repo'%!(PACKER_COMMA) 'xusr': False%!(PACKER_COMMA) 'atime': 1579387973.0000038%!(PACKER_COMMA) 'isdir': False%!(PACKER_COMMA) 'ctime': 1579387834.4402587%!(PACKER_COMMA) 'isblk': False%!(PACKER_COMMA) 'xgrp': False%!(PACKER_COMMA) 'dev': 66306%!(PACKER_COMMA) 'wgrp': False%!(PACKER_COMMA) 'isfifo': False%!(PACKER_COMMA) 'mode': '0644'%!(PACKER_COMMA) 'islnk': False})
+1579387999,,ui,message,    amazon-ebs: ok: [default] => (item={'uid': 0%!(PACKER_COMMA) 'woth': False%!(PACKER_COMMA) 'mtime': 1567688740.0%!(PACKER_COMMA) 'inode': 12613352%!(PACKER_COMMA) 'isgid': False%!(PACKER_COMMA) 'size': 630%!(PACKER_COMMA) 'roth': True%!(PACKER_COMMA) 'isuid': False%!(PACKER_COMMA) 'isreg': True%!(PACKER_COMMA) 'pw_name': 'root'%!(PACKER_COMMA) 'gid': 0%!(PACKER_COMMA) 'ischr': False%!(PACKER_COMMA) 'wusr': True%!(PACKER_COMMA) 'xoth': False%!(PACKER_COMMA) 'rusr': True%!(PACKER_COMMA) 'nlink': 1%!(PACKER_COMMA) 'issock': False%!(PACKER_COMMA) 'rgrp': True%!(PACKER_COMMA) 'gr_name': 'root'%!(PACKER_COMMA) 'path': '/etc/yum.repos.d/CentOS-Media.repo'%!(PACKER_COMMA) 'xusr': False%!(PACKER_COMMA) 'atime': 1579387973.002004%!(PACKER_COMMA) 'isdir': False%!(PACKER_COMMA) 'ctime': 1579387834.4412587%!(PACKER_COMMA) 'isblk': False%!(PACKER_COMMA) 'xgrp': False%!(PACKER_COMMA) 'dev': 66306%!(PACKER_COMMA) 'wgrp': False%!(PACKER_COMMA) 'isfifo': False%!(PACKER_COMMA) 'mode': '0644'%!(PACKER_COMMA) 'islnk': False})
+1579388000,,ui,message,    amazon-ebs: ok: [default] => (item={'uid': 0%!(PACKER_COMMA) 'woth': False%!(PACKER_COMMA) 'mtime': 1567688740.0%!(PACKER_COMMA) 'inode': 12613353%!(PACKER_COMMA) 'isgid': False%!(PACKER_COMMA) 'size': 1331%!(PACKER_COMMA) 'roth': True%!(PACKER_COMMA) 'isuid': False%!(PACKER_COMMA) 'isreg': True%!(PACKER_COMMA) 'pw_name': 'root'%!(PACKER_COMMA) 'gid': 0%!(PACKER_COMMA) 'ischr': False%!(PACKER_COMMA) 'wusr': True%!(PACKER_COMMA) 'xoth': False%!(PACKER_COMMA) 'rusr': True%!(PACKER_COMMA) 'nlink': 1%!(PACKER_COMMA) 'issock': False%!(PACKER_COMMA) 'rgrp': True%!(PACKER_COMMA) 'gr_name': 'root'%!(PACKER_COMMA) 'path': '/etc/yum.repos.d/CentOS-Sources.repo'%!(PACKER_COMMA) 'xusr': False%!(PACKER_COMMA) 'atime': 1579387973.0040038%!(PACKER_COMMA) 'isdir': False%!(PACKER_COMMA) 'ctime': 1579387834.4412587%!(PACKER_COMMA) 'isblk': False%!(PACKER_COMMA) 'xgrp': False%!(PACKER_COMMA) 'dev': 66306%!(PACKER_COMMA) 'wgrp': False%!(PACKER_COMMA) 'isfifo': False%!(PACKER_COMMA) 'mode': '0644'%!(PACKER_COMMA) 'islnk': False})
+1579388001,,ui,message,    amazon-ebs: ok: [default] => (item={'uid': 0%!(PACKER_COMMA) 'woth': False%!(PACKER_COMMA) 'mtime': 1567688740.0%!(PACKER_COMMA) 'inode': 12613354%!(PACKER_COMMA) 'isgid': False%!(PACKER_COMMA) 'size': 6639%!(PACKER_COMMA) 'roth': True%!(PACKER_COMMA) 'isuid': False%!(PACKER_COMMA) 'isreg': True%!(PACKER_COMMA) 'pw_name': 'root'%!(PACKER_COMMA) 'gid': 0%!(PACKER_COMMA) 'ischr': False%!(PACKER_COMMA) 'wusr': True%!(PACKER_COMMA) 'xoth': False%!(PACKER_COMMA) 'rusr': True%!(PACKER_COMMA) 'nlink': 1%!(PACKER_COMMA) 'issock': False%!(PACKER_COMMA) 'rgrp': True%!(PACKER_COMMA) 'gr_name': 'root'%!(PACKER_COMMA) 'path': '/etc/yum.repos.d/CentOS-Vault.repo'%!(PACKER_COMMA) 'xusr': False%!(PACKER_COMMA) 'atime': 1579387973.0070038%!(PACKER_COMMA) 'isdir': False%!(PACKER_COMMA) 'ctime': 1579387834.4412587%!(PACKER_COMMA) 'isblk': False%!(PACKER_COMMA) 'xgrp': False%!(PACKER_COMMA) 'dev': 66306%!(PACKER_COMMA) 'wgrp': False%!(PACKER_COMMA) 'isfifo': False%!(PACKER_COMMA) 'mode': '0644'%!(PACKER_COMMA) 'islnk': False})
+1579388001,,ui,message,    amazon-ebs: ok: [default] => (item={'uid': 0%!(PACKER_COMMA) 'woth': False%!(PACKER_COMMA) 'mtime': 1567688740.0%!(PACKER_COMMA) 'inode': 12613355%!(PACKER_COMMA) 'isgid': False%!(PACKER_COMMA) 'size': 314%!(PACKER_COMMA) 'roth': True%!(PACKER_COMMA) 'isuid': False%!(PACKER_COMMA) 'isreg': True%!(PACKER_COMMA) 'pw_name': 'root'%!(PACKER_COMMA) 'gid': 0%!(PACKER_COMMA) 'ischr': False%!(PACKER_COMMA) 'wusr': True%!(PACKER_COMMA) 'xoth': False%!(PACKER_COMMA) 'rusr': True%!(PACKER_COMMA) 'nlink': 1%!(PACKER_COMMA) 'issock': False%!(PACKER_COMMA) 'rgrp': True%!(PACKER_COMMA) 'gr_name': 'root'%!(PACKER_COMMA) 'path': '/etc/yum.repos.d/CentOS-fasttrack.repo'%!(PACKER_COMMA) 'xusr': False%!(PACKER_COMMA) 'atime': 1579387973.0280032%!(PACKER_COMMA) 'isdir': False%!(PACKER_COMMA) 'ctime': 1579387834.4412587%!(PACKER_COMMA) 'isblk': False%!(PACKER_COMMA) 'xgrp': False%!(PACKER_COMMA) 'dev': 66306%!(PACKER_COMMA) 'wgrp': False%!(PACKER_COMMA) 'isfifo': False%!(PACKER_COMMA) 'mode': '0644'%!(PACKER_COMMA) 'islnk': False})
+1579388002,,ui,message,    amazon-ebs: ok: [default] => (item={'uid': 0%!(PACKER_COMMA) 'woth': False%!(PACKER_COMMA) 'mtime': 1568762731.0%!(PACKER_COMMA) 'inode': 12747181%!(PACKER_COMMA) 'isgid': False%!(PACKER_COMMA) 'size': 1149%!(PACKER_COMMA) 'roth': True%!(PACKER_COMMA) 'isuid': False%!(PACKER_COMMA) 'isreg': True%!(PACKER_COMMA) 'pw_name': 'root'%!(PACKER_COMMA) 'gid': 0%!(PACKER_COMMA) 'ischr': False%!(PACKER_COMMA) 'wusr': True%!(PACKER_COMMA) 'xoth': False%!(PACKER_COMMA) 'rusr': True%!(PACKER_COMMA) 'nlink': 1%!(PACKER_COMMA) 'issock': False%!(PACKER_COMMA) 'rgrp': True%!(PACKER_COMMA) 'gr_name': 'root'%!(PACKER_COMMA) 'path': '/etc/yum.repos.d/epel-testing.repo'%!(PACKER_COMMA) 'xusr': False%!(PACKER_COMMA) 'atime': 1579387973.0300033%!(PACKER_COMMA) 'isdir': False%!(PACKER_COMMA) 'ctime': 1579387894.6110408%!(PACKER_COMMA) 'isblk': False%!(PACKER_COMMA) 'xgrp': False%!(PACKER_COMMA) 'dev': 66306%!(PACKER_COMMA) 'wgrp': False%!(PACKER_COMMA) 'isfifo': False%!(PACKER_COMMA) 'mode': '0644'%!(PACKER_COMMA) 'islnk': False})
+1579388003,,ui,message,    amazon-ebs: ok: [default] => (item={'uid': 0%!(PACKER_COMMA) 'woth': False%!(PACKER_COMMA) 'mtime': 1568762731.0%!(PACKER_COMMA) 'inode': 13129193%!(PACKER_COMMA) 'isgid': False%!(PACKER_COMMA) 'size': 1050%!(PACKER_COMMA) 'roth': True%!(PACKER_COMMA) 'isuid': False%!(PACKER_COMMA) 'isreg': True%!(PACKER_COMMA) 'pw_name': 'root'%!(PACKER_COMMA) 'gid': 0%!(PACKER_COMMA) 'ischr': False%!(PACKER_COMMA) 'wusr': True%!(PACKER_COMMA) 'xoth': False%!(PACKER_COMMA) 'rusr': True%!(PACKER_COMMA) 'nlink': 1%!(PACKER_COMMA) 'issock': False%!(PACKER_COMMA) 'rgrp': True%!(PACKER_COMMA) 'gr_name': 'root'%!(PACKER_COMMA) 'path': '/etc/yum.repos.d/epel.repo'%!(PACKER_COMMA) 'xusr': False%!(PACKER_COMMA) 'atime': 1579387973.0320032%!(PACKER_COMMA) 'isdir': False%!(PACKER_COMMA) 'ctime': 1579387894.6110408%!(PACKER_COMMA) 'isblk': False%!(PACKER_COMMA) 'xgrp': False%!(PACKER_COMMA) 'dev': 66306%!(PACKER_COMMA) 'wgrp': False%!(PACKER_COMMA) 'isfifo': False%!(PACKER_COMMA) 'mode': '0644'%!(PACKER_COMMA) 'islnk': False})
+1579388003,,ui,message,    amazon-ebs:
+1579388003,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Enable GNOME3 Screensaver Lock After Idle Period] ***
+1579388004,,ui,message,    amazon-ebs: changed: [default]
+1579388004,,ui,message,    amazon-ebs:
+1579388004,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Prevent user modification of GNOME lock-enabled] ***
+1579388005,,ui,message,    amazon-ebs: changed: [default]
+1579388005,,ui,message,    amazon-ebs:
+1579388005,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Enable GNOME3 Screensaver Idle Activation] ***
+1579388005,,ui,message,    amazon-ebs: changed: [default]
+1579388005,,ui,message,    amazon-ebs:
+1579388005,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Prevent user modification of GNOME idle_activation_enabled] ***
+1579388006,,ui,message,    amazon-ebs: changed: [default]
+1579388006,,ui,message,    amazon-ebs:
+1579388006,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Implement Blank Screensaver] ****************
+1579388007,,ui,message,    amazon-ebs: changed: [default]
+1579388007,,ui,message,    amazon-ebs:
+1579388007,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Prevent user modification of GNOME picture-uri] ***
+1579388008,,ui,message,    amazon-ebs: changed: [default]
+1579388008,,ui,message,    amazon-ebs:
+1579388008,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set GNOME3 Screensaver Inactivity Timeout] ***
+1579388009,,ui,message,    amazon-ebs: changed: [default]
+1579388009,,ui,message,    amazon-ebs:
+1579388009,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Prevent user modification of GNOME idle-delay] ***
+1579388010,,ui,message,    amazon-ebs: changed: [default]
+1579388010,,ui,message,    amazon-ebs:
+1579388010,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Does prelink file exist] ********************
+1579388010,,ui,message,    amazon-ebs: ok: [default]
+1579388010,,ui,message,    amazon-ebs:
+1579388010,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : disable prelinking] *************************
+1579388010,,ui,message,    amazon-ebs: skipping: [default]
+1579388010,,ui,message,    amazon-ebs:
+1579388010,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set fact: Package manager reinstall command (dnf)] ***
+1579388010,,ui,message,    amazon-ebs: skipping: [default]
+1579388010,,ui,message,    amazon-ebs:
+1579388011,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set fact: Package manager reinstall command (yum)] ***
+1579388011,,ui,message,    amazon-ebs: skipping: [default]
+1579388011,,ui,message,    amazon-ebs:
+1579388011,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Read files with incorrect hash] *************
+1579388011,,ui,message,    amazon-ebs: skipping: [default]
+1579388011,,ui,message,    amazon-ebs:
+1579388011,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Create list of packages] ********************
+1579388011,,ui,message,    amazon-ebs: skipping: [default]
+1579388011,,ui,message,    amazon-ebs:
+1579388011,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Reinstall packages of files with incorrect hash] ***
+1579388011,,ui,message,    amazon-ebs: skipping: [default]
+1579388011,,ui,message,    amazon-ebs:
+1579388011,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Read list of files with incorrect permissions] ***
+1579388013,,ui,message,    amazon-ebs: ok: [default]
+1579388013,,ui,message,    amazon-ebs:
+1579388013,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Create list of packages] ********************
+1579388014,,ui,message,    amazon-ebs: ok: [default] => (item=/etc/pki/ca-trust/extracted/java/cacerts)
+1579388015,,ui,message,    amazon-ebs: ok: [default] => (item=/etc/pki/ca-trust/extracted/openssl/ca-bundle.trust.crt)
+1579388015,,ui,message,    amazon-ebs: ok: [default] => (item=/etc/pki/ca-trust/extracted/pem/email-ca-bundle.pem)
+1579388016,,ui,message,    amazon-ebs: ok: [default] => (item=/etc/pki/ca-trust/extracted/pem/objsign-ca-bundle.pem)
+1579388017,,ui,message,    amazon-ebs: ok: [default] => (item=/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem)
+1579388018,,ui,message,    amazon-ebs: ok: [default] => (item=/var/spool/anacron/cron.daily)
+1579388019,,ui,message,    amazon-ebs: ok: [default] => (item=/var/spool/anacron/cron.monthly)
+1579388019,,ui,message,    amazon-ebs: ok: [default] => (item=/var/spool/anacron/cron.weekly)
+1579388020,,ui,message,    amazon-ebs: ok: [default] => (item=/boot/initramfs-3.10.0-957.1.3.el7.x86_64.img)
+1579388020,,ui,message,    amazon-ebs:
+1579388020,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Correct file permissions with RPM] **********
+1579388021,,ui,message,    amazon-ebs: changed: [default] => (item=ca-certificates-2019.2.32-76.el7_7.noarch)
+1579388022,,ui,message,    amazon-ebs: changed: [default] => (item=cronie-anacron-1.4.11-23.el7.x86_64)
+1579388025,,ui,message,    amazon-ebs: changed: [default] => (item=kernel-3.10.0-957.1.3.el7.x86_64)
+1579388025,,ui,message,    amazon-ebs:
+1579388025,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure aide is installed] *******************
+1579388028,,ui,message,    amazon-ebs: changed: [default]
+1579388028,,ui,message,    amazon-ebs:
+1579388028,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure AIDE is installed] *******************
+1579388029,,ui,message,    amazon-ebs: ok: [default] => (item=aide)
+1579388029,,ui,message,    amazon-ebs:
+1579388029,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Build and Test AIDE Database] ***************
+1579388077,,ui,message,    amazon-ebs: changed: [default]
+1579388077,,ui,message,    amazon-ebs:
+1579388077,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Check whether the stock AIDE Database exists] ***
+1579388078,,ui,message,    amazon-ebs: ok: [default]
+1579388078,,ui,message,    amazon-ebs:
+1579388078,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Stage AIDE Database] ************************
+1579388079,,ui,message,    amazon-ebs: changed: [default]
+1579388079,,ui,message,    amazon-ebs:
+1579388079,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure AIDE is installed] *******************
+1579388080,,ui,message,    amazon-ebs: ok: [default] => (item=aide)
+1579388080,,ui,message,    amazon-ebs:
+1579388080,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Configure Periodic Execution of AIDE] *******
+1579388081,,ui,message,    amazon-ebs: changed: [default]
+1579388081,,ui,message,    amazon-ebs: [WARNING]: The value 5 (type int) in a string field was converted to u'5' (type
+1579388081,,ui,message,    amazon-ebs: string). If this does not look like what you expect%!(PACKER_COMMA) quote the entire value to
+1579388081,,ui,message,    amazon-ebs: ensure it does not change.
+1579388081,,ui,message,    amazon-ebs: [WARNING]: The value 4 (type int) in a string field was converted to u'4' (type
+1579388081,,ui,message,    amazon-ebs: string). If this does not look like what you expect%!(PACKER_COMMA) quote the entire value to
+1579388081,,ui,message,    amazon-ebs: ensure it does not change.
+1579388081,,ui,message,    amazon-ebs: [WARNING]: The value 0 (type int) in a string field was converted to u'0' (type
+1579388081,,ui,message,    amazon-ebs: string). If this does not look like what you expect%!(PACKER_COMMA) quote the entire value to
+1579388081,,ui,message,    amazon-ebs: ensure it does not change.
+1579388081,,ui,message,    amazon-ebs:
+1579388081,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Test for existence /etc/group] **************
+1579388082,,ui,message,    amazon-ebs: ok: [default]
+1579388082,,ui,message,    amazon-ebs:
+1579388082,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure group owner 0 on /etc/group] *********
+1579388083,,ui,message,    amazon-ebs: ok: [default]
+1579388083,,ui,message,    amazon-ebs:
+1579388083,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Test for existence /etc/group] **************
+1579388084,,ui,message,    amazon-ebs: ok: [default]
+1579388084,,ui,message,    amazon-ebs:
+1579388084,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure permission 0644 on /etc/group] *******
+1579388084,,ui,message,    amazon-ebs: ok: [default]
+1579388084,,ui,message,    amazon-ebs:
+1579388084,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Test for existence /etc/passwd] *************
+1579388085,,ui,message,    amazon-ebs: ok: [default]
+1579388085,,ui,message,    amazon-ebs:
+1579388085,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure owner 0 on /etc/passwd] **************
+1579388086,,ui,message,    amazon-ebs: ok: [default]
+1579388086,,ui,message,    amazon-ebs:
+1579388086,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Test for existence /etc/passwd] *************
+1579388087,,ui,message,    amazon-ebs: ok: [default]
+1579388087,,ui,message,    amazon-ebs:
+1579388087,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure group owner 0 on /etc/passwd] ********
+1579388088,,ui,message,    amazon-ebs: ok: [default]
+1579388088,,ui,message,    amazon-ebs:
+1579388088,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Test for existence /etc/passwd] *************
+1579388089,,ui,message,    amazon-ebs: ok: [default]
+1579388089,,ui,message,    amazon-ebs:
+1579388089,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure permission 0644 on /etc/passwd] ******
+1579388089,,ui,message,    amazon-ebs: ok: [default]
+1579388089,,ui,message,    amazon-ebs:
+1579388089,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Test for existence /etc/shadow] *************
+1579388090,,ui,message,    amazon-ebs: ok: [default]
+1579388090,,ui,message,    amazon-ebs:
+1579388090,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure permission 0000 on /etc/shadow] ******
+1579388091,,ui,message,    amazon-ebs: ok: [default]
+1579388091,,ui,message,    amazon-ebs:
+1579388091,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Test for existence /etc/shadow] *************
+1579388092,,ui,message,    amazon-ebs: ok: [default]
+1579388092,,ui,message,    amazon-ebs:
+1579388092,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure owner 0 on /etc/shadow] **************
+1579388093,,ui,message,    amazon-ebs: ok: [default]
+1579388093,,ui,message,    amazon-ebs:
+1579388093,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Test for existence /etc/shadow] *************
+1579388094,,ui,message,    amazon-ebs: ok: [default]
+1579388094,,ui,message,    amazon-ebs:
+1579388094,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure group owner 0 on /etc/shadow] ********
+1579388094,,ui,message,    amazon-ebs: ok: [default]
+1579388095,,ui,message,    amazon-ebs:
+1579388095,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Test for existence /etc/group] **************
+1579388095,,ui,message,    amazon-ebs: ok: [default]
+1579388095,,ui,message,    amazon-ebs:
+1579388095,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure owner 0 on /etc/group] ***************
+1579388096,,ui,message,    amazon-ebs: ok: [default]
+1579388096,,ui,message,    amazon-ebs:
+1579388096,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure libreswan is installed] **************
+1579388103,,ui,message,    amazon-ebs: changed: [default]
+1579388103,,ui,message,    amazon-ebs:
+1579388103,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Gather the package facts] *******************
+1579388106,,ui,message,    amazon-ebs: ok: [default]
+1579388106,,ui,message,    amazon-ebs:
+1579388106,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Enable service auditd] **********************
+1579388107,,ui,message,    amazon-ebs: ok: [default]
+1579388107,,ui,message,    amazon-ebs:
+1579388107,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : check audit argument exists] ****************
+1579388108,,ui,message,    amazon-ebs: changed: [default]
+1579388108,,ui,message,    amazon-ebs:
+1579388108,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : replace existing audit argument] ************
+1579388108,,ui,message,    amazon-ebs: skipping: [default]
+1579388108,,ui,message,    amazon-ebs:
+1579388108,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : add audit argument] *************************
+1579388109,,ui,message,    amazon-ebs: changed: [default]
+1579388109,,ui,message,    amazon-ebs:
+1579388109,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : update bootloader menu] *********************
+1579388110,,ui,message,    amazon-ebs: changed: [default]
+1579388110,,ui,message,    amazon-ebs:
+1579388110,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Configure auditd Max Log File Size] *********
+1579388111,,ui,message,    amazon-ebs: changed: [default]
+1579388111,,ui,message,    amazon-ebs:
+1579388111,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Configure auditd Number of Logs Retained] ***
+1579388112,,ui,message,    amazon-ebs: ok: [default]
+1579388112,,ui,message,    amazon-ebs:
+1579388112,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : enable syslog plugin] ***********************
+1579388113,,ui,message,    amazon-ebs: changed: [default]
+1579388113,,ui,message,    amazon-ebs:
+1579388113,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Configure auditd mail_acct Action on Low Disk Space] ***
+1579388113,,ui,message,    amazon-ebs: ok: [default]
+1579388114,,ui,message,    amazon-ebs:
+1579388114,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Configure auditd admin_space_left Action on Low Disk Space] ***
+1579388114,,ui,message,    amazon-ebs: changed: [default]
+1579388114,,ui,message,    amazon-ebs:
+1579388114,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Configure auditd space_left Action on Low Disk Space] ***
+1579388115,,ui,message,    amazon-ebs: changed: [default]
+1579388115,,ui,message,    amazon-ebs:
+1579388115,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Configure auditd max_log_file_action Upon Reaching Maximum Log Size] ***
+1579388116,,ui,message,    amazon-ebs: changed: [default]
+1579388116,,ui,message,    amazon-ebs:
+1579388116,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set architecture for audit fremovexattr tasks] ***
+1579388116,,ui,message,    amazon-ebs: ok: [default]
+1579388116,,ui,message,    amazon-ebs:
+1579388116,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Search /etc/audit/rules.d for other DAC audit rules] ***
+1579388117,,ui,message,    amazon-ebs: ok: [default]
+1579388117,,ui,message,    amazon-ebs:
+1579388117,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : If existing DAC ruleset not found%!(PACKER_COMMA) use /etc/audit/rules.d/privileged.rules as the recipient for the rule] ***
+1579388117,,ui,message,    amazon-ebs: ok: [default]
+1579388117,,ui,message,    amazon-ebs:
+1579388117,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Use matched file as the recipient for the rule] ***
+1579388117,,ui,message,    amazon-ebs: skipping: [default]
+1579388117,,ui,message,    amazon-ebs:
+1579388117,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fremovexattr rule in rules.d when on x86] ***
+1579388118,,ui,message,    amazon-ebs: changed: [default]
+1579388118,,ui,message,    amazon-ebs:
+1579388118,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fremovexattr rule in rules.d when on x86_64] ***
+1579388119,,ui,message,    amazon-ebs: changed: [default]
+1579388119,,ui,message,    amazon-ebs:
+1579388119,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fremovexattr rule in /etc/audit/audit.rules when on x86] ***
+1579388120,,ui,message,    amazon-ebs: changed: [default]
+1579388120,,ui,message,    amazon-ebs:
+1579388120,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fremovexattr rule in audit.rules when on x86_64] ***
+1579388121,,ui,message,    amazon-ebs: changed: [default]
+1579388121,,ui,message,    amazon-ebs:
+1579388121,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set architecture for audit fchmod tasks] ****
+1579388121,,ui,message,    amazon-ebs: ok: [default]
+1579388121,,ui,message,    amazon-ebs:
+1579388121,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Search /etc/audit/rules.d for other DAC audit rules] ***
+1579388122,,ui,message,    amazon-ebs: ok: [default]
+1579388122,,ui,message,    amazon-ebs:
+1579388122,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : If existing DAC ruleset not found%!(PACKER_COMMA) use /etc/audit/rules.d/privileged.rules as the recipient for the rule] ***
+1579388122,,ui,message,    amazon-ebs: ok: [default]
+1579388122,,ui,message,    amazon-ebs:
+1579388122,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Use matched file as the recipient for the rule] ***
+1579388122,,ui,message,    amazon-ebs: skipping: [default]
+1579388122,,ui,message,    amazon-ebs:
+1579388122,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fchmod rule in rules.d when on x86] ***
+1579388123,,ui,message,    amazon-ebs: changed: [default]
+1579388123,,ui,message,    amazon-ebs:
+1579388123,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fchmod rule in rules.d when on x86_64] ***
+1579388124,,ui,message,    amazon-ebs: changed: [default]
+1579388124,,ui,message,    amazon-ebs:
+1579388124,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fchmod rule in /etc/audit/audit.rules when on x86] ***
+1579388125,,ui,message,    amazon-ebs: changed: [default]
+1579388125,,ui,message,    amazon-ebs:
+1579388125,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fchmod rule in audit.rules when on x86_64] ***
+1579388126,,ui,message,    amazon-ebs: changed: [default]
+1579388126,,ui,message,    amazon-ebs:
+1579388126,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set architecture for audit fsetxattr tasks] ***
+1579388126,,ui,message,    amazon-ebs: ok: [default]
+1579388126,,ui,message,    amazon-ebs:
+1579388126,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Search /etc/audit/rules.d for other DAC audit rules] ***
+1579388127,,ui,message,    amazon-ebs: ok: [default]
+1579388127,,ui,message,    amazon-ebs:
+1579388127,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : If existing DAC ruleset not found%!(PACKER_COMMA) use /etc/audit/rules.d/privileged.rules as the recipient for the rule] ***
+1579388127,,ui,message,    amazon-ebs: ok: [default]
+1579388127,,ui,message,    amazon-ebs:
+1579388127,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Use matched file as the recipient for the rule] ***
+1579388127,,ui,message,    amazon-ebs: skipping: [default]
+1579388127,,ui,message,    amazon-ebs:
+1579388127,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fsetxattr rule in rules.d when on x86] ***
+1579388128,,ui,message,    amazon-ebs: changed: [default]
+1579388128,,ui,message,    amazon-ebs:
+1579388128,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fsetxattr rule in rules.d when on x86_64] ***
+1579388129,,ui,message,    amazon-ebs: changed: [default]
+1579388129,,ui,message,    amazon-ebs:
+1579388129,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fsetxattr rule in /etc/audit/audit.rules when on x86] ***
+1579388130,,ui,message,    amazon-ebs: changed: [default]
+1579388130,,ui,message,    amazon-ebs:
+1579388130,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fsetxattr rule in audit.rules when on x86_64] ***
+1579388130,,ui,message,    amazon-ebs: changed: [default]
+1579388130,,ui,message,    amazon-ebs:
+1579388130,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set architecture for audit fchown tasks] ****
+1579388131,,ui,message,    amazon-ebs: ok: [default]
+1579388131,,ui,message,    amazon-ebs:
+1579388131,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Search /etc/audit/rules.d for other DAC audit rules] ***
+1579388131,,ui,message,    amazon-ebs: ok: [default]
+1579388131,,ui,message,    amazon-ebs:
+1579388131,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : If existing DAC ruleset not found%!(PACKER_COMMA) use /etc/audit/rules.d/privileged.rules as the recipient for the rule] ***
+1579388132,,ui,message,    amazon-ebs: ok: [default]
+1579388132,,ui,message,    amazon-ebs:
+1579388132,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Use matched file as the recipient for the rule] ***
+1579388132,,ui,message,    amazon-ebs: skipping: [default]
+1579388132,,ui,message,    amazon-ebs:
+1579388132,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fchown rule in rules.d when on x86] ***
+1579388133,,ui,message,    amazon-ebs: changed: [default]
+1579388133,,ui,message,    amazon-ebs:
+1579388133,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fchown rule in rules.d when on x86_64] ***
+1579388133,,ui,message,    amazon-ebs: changed: [default]
+1579388133,,ui,message,    amazon-ebs:
+1579388133,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fchown rule in /etc/audit/audit.rules when on x86] ***
+1579388134,,ui,message,    amazon-ebs: changed: [default]
+1579388134,,ui,message,    amazon-ebs:
+1579388134,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fchown rule in audit.rules when on x86_64] ***
+1579388135,,ui,message,    amazon-ebs: changed: [default]
+1579388135,,ui,message,    amazon-ebs:
+1579388135,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set architecture for audit fchownat tasks] ***
+1579388135,,ui,message,    amazon-ebs: ok: [default]
+1579388135,,ui,message,    amazon-ebs:
+1579388135,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Search /etc/audit/rules.d for other DAC audit rules] ***
+1579388136,,ui,message,    amazon-ebs: ok: [default]
+1579388136,,ui,message,    amazon-ebs:
+1579388136,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : If existing DAC ruleset not found%!(PACKER_COMMA) use /etc/audit/rules.d/privileged.rules as the recipient for the rule] ***
+1579388136,,ui,message,    amazon-ebs: ok: [default]
+1579388136,,ui,message,    amazon-ebs:
+1579388136,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Use matched file as the recipient for the rule] ***
+1579388136,,ui,message,    amazon-ebs: skipping: [default]
+1579388136,,ui,message,    amazon-ebs:
+1579388136,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fchownat rule in rules.d when on x86] ***
+1579388137,,ui,message,    amazon-ebs: changed: [default]
+1579388137,,ui,message,    amazon-ebs:
+1579388137,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fchownat rule in rules.d when on x86_64] ***
+1579388138,,ui,message,    amazon-ebs: changed: [default]
+1579388138,,ui,message,    amazon-ebs:
+1579388138,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fchownat rule in /etc/audit/audit.rules when on x86] ***
+1579388139,,ui,message,    amazon-ebs: changed: [default]
+1579388139,,ui,message,    amazon-ebs:
+1579388139,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fchownat rule in audit.rules when on x86_64] ***
+1579388140,,ui,message,    amazon-ebs: changed: [default]
+1579388140,,ui,message,    amazon-ebs:
+1579388140,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set architecture for audit chmod tasks] *****
+1579388140,,ui,message,    amazon-ebs: ok: [default]
+1579388140,,ui,message,    amazon-ebs:
+1579388140,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Search /etc/audit/rules.d for other DAC audit rules] ***
+1579388141,,ui,message,    amazon-ebs: ok: [default]
+1579388141,,ui,message,    amazon-ebs:
+1579388141,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : If existing DAC ruleset not found%!(PACKER_COMMA) use /etc/audit/rules.d/privileged.rules as the recipient for the rule] ***
+1579388141,,ui,message,    amazon-ebs: ok: [default]
+1579388141,,ui,message,    amazon-ebs:
+1579388141,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Use matched file as the recipient for the rule] ***
+1579388141,,ui,message,    amazon-ebs: skipping: [default]
+1579388141,,ui,message,    amazon-ebs:
+1579388141,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the chmod rule in rules.d when on x86] ***
+1579388142,,ui,message,    amazon-ebs: changed: [default]
+1579388142,,ui,message,    amazon-ebs:
+1579388142,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the chmod rule in rules.d when on x86_64] ***
+1579388143,,ui,message,    amazon-ebs: changed: [default]
+1579388143,,ui,message,    amazon-ebs:
+1579388143,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the chmod rule in /etc/audit/audit.rules when on x86] ***
+1579388144,,ui,message,    amazon-ebs: changed: [default]
+1579388144,,ui,message,    amazon-ebs:
+1579388144,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the chmod rule in audit.rules when on x86_64] ***
+1579388144,,ui,message,    amazon-ebs: changed: [default]
+1579388145,,ui,message,    amazon-ebs:
+1579388145,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set architecture for audit lremovexattr tasks] ***
+1579388145,,ui,message,    amazon-ebs: ok: [default]
+1579388145,,ui,message,    amazon-ebs:
+1579388145,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Search /etc/audit/rules.d for other DAC audit rules] ***
+1579388145,,ui,message,    amazon-ebs: ok: [default]
+1579388145,,ui,message,    amazon-ebs:
+1579388145,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : If existing DAC ruleset not found%!(PACKER_COMMA) use /etc/audit/rules.d/privileged.rules as the recipient for the rule] ***
+1579388146,,ui,message,    amazon-ebs: ok: [default]
+1579388146,,ui,message,    amazon-ebs:
+1579388146,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Use matched file as the recipient for the rule] ***
+1579388146,,ui,message,    amazon-ebs: skipping: [default]
+1579388146,,ui,message,    amazon-ebs:
+1579388146,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the lremovexattr rule in rules.d when on x86] ***
+1579388147,,ui,message,    amazon-ebs: changed: [default]
+1579388147,,ui,message,    amazon-ebs:
+1579388147,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the lremovexattr rule in rules.d when on x86_64] ***
+1579388147,,ui,message,    amazon-ebs: changed: [default]
+1579388147,,ui,message,    amazon-ebs:
+1579388147,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the lremovexattr rule in /etc/audit/audit.rules when on x86] ***
+1579388148,,ui,message,    amazon-ebs: changed: [default]
+1579388148,,ui,message,    amazon-ebs:
+1579388148,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the lremovexattr rule in audit.rules when on x86_64] ***
+1579388149,,ui,message,    amazon-ebs: changed: [default]
+1579388149,,ui,message,    amazon-ebs:
+1579388149,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set architecture for audit fchmodat tasks] ***
+1579388149,,ui,message,    amazon-ebs: ok: [default]
+1579388149,,ui,message,    amazon-ebs:
+1579388149,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Search /etc/audit/rules.d for other DAC audit rules] ***
+1579388150,,ui,message,    amazon-ebs: ok: [default]
+1579388150,,ui,message,    amazon-ebs:
+1579388150,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : If existing DAC ruleset not found%!(PACKER_COMMA) use /etc/audit/rules.d/privileged.rules as the recipient for the rule] ***
+1579388150,,ui,message,    amazon-ebs: ok: [default]
+1579388150,,ui,message,    amazon-ebs:
+1579388150,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Use matched file as the recipient for the rule] ***
+1579388150,,ui,message,    amazon-ebs: skipping: [default]
+1579388150,,ui,message,    amazon-ebs:
+1579388150,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fchmodat rule in rules.d when on x86] ***
+1579388151,,ui,message,    amazon-ebs: changed: [default]
+1579388151,,ui,message,    amazon-ebs:
+1579388151,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fchmodat rule in rules.d when on x86_64] ***
+1579388152,,ui,message,    amazon-ebs: changed: [default]
+1579388152,,ui,message,    amazon-ebs:
+1579388152,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fchmodat rule in /etc/audit/audit.rules when on x86] ***
+1579388153,,ui,message,    amazon-ebs: changed: [default]
+1579388153,,ui,message,    amazon-ebs:
+1579388153,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the fchmodat rule in audit.rules when on x86_64] ***
+1579388154,,ui,message,    amazon-ebs: changed: [default]
+1579388154,,ui,message,    amazon-ebs:
+1579388154,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set architecture for audit lchown tasks] ****
+1579388154,,ui,message,    amazon-ebs: ok: [default]
+1579388154,,ui,message,    amazon-ebs:
+1579388154,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Search /etc/audit/rules.d for other DAC audit rules] ***
+1579388155,,ui,message,    amazon-ebs: ok: [default]
+1579388155,,ui,message,    amazon-ebs:
+1579388155,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : If existing DAC ruleset not found%!(PACKER_COMMA) use /etc/audit/rules.d/privileged.rules as the recipient for the rule] ***
+1579388155,,ui,message,    amazon-ebs: ok: [default]
+1579388155,,ui,message,    amazon-ebs:
+1579388155,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Use matched file as the recipient for the rule] ***
+1579388155,,ui,message,    amazon-ebs: skipping: [default]
+1579388155,,ui,message,    amazon-ebs:
+1579388155,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the lchown rule in rules.d when on x86] ***
+1579388156,,ui,message,    amazon-ebs: changed: [default]
+1579388156,,ui,message,    amazon-ebs:
+1579388156,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the lchown rule in rules.d when on x86_64] ***
+1579388157,,ui,message,    amazon-ebs: changed: [default]
+1579388157,,ui,message,    amazon-ebs:
+1579388157,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the lchown rule in /etc/audit/audit.rules when on x86] ***
+1579388158,,ui,message,    amazon-ebs: changed: [default]
+1579388158,,ui,message,    amazon-ebs:
+1579388158,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the lchown rule in audit.rules when on x86_64] ***
+1579388159,,ui,message,    amazon-ebs: changed: [default]
+1579388159,,ui,message,    amazon-ebs:
+1579388159,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set architecture for audit chown tasks] *****
+1579388159,,ui,message,    amazon-ebs: ok: [default]
+1579388159,,ui,message,    amazon-ebs:
+1579388159,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Search /etc/audit/rules.d for other DAC audit rules] ***
+1579388160,,ui,message,    amazon-ebs: ok: [default]
+1579388160,,ui,message,    amazon-ebs:
+1579388160,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : If existing DAC ruleset not found%!(PACKER_COMMA) use /etc/audit/rules.d/privileged.rules as the recipient for the rule] ***
+1579388160,,ui,message,    amazon-ebs: ok: [default]
+1579388160,,ui,message,    amazon-ebs:
+1579388160,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Use matched file as the recipient for the rule] ***
+1579388160,,ui,message,    amazon-ebs: skipping: [default]
+1579388160,,ui,message,    amazon-ebs:
+1579388160,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the chown rule in rules.d when on x86] ***
+1579388161,,ui,message,    amazon-ebs: changed: [default]
+1579388161,,ui,message,    amazon-ebs:
+1579388161,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the chown rule in rules.d when on x86_64] ***
+1579388162,,ui,message,    amazon-ebs: changed: [default]
+1579388162,,ui,message,    amazon-ebs:
+1579388162,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the chown rule in /etc/audit/audit.rules when on x86] ***
+1579388163,,ui,message,    amazon-ebs: changed: [default]
+1579388163,,ui,message,    amazon-ebs:
+1579388163,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the chown rule in audit.rules when on x86_64] ***
+1579388164,,ui,message,    amazon-ebs: changed: [default]
+1579388164,,ui,message,    amazon-ebs:
+1579388164,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set architecture for audit lsetxattr tasks] ***
+1579388164,,ui,message,    amazon-ebs: ok: [default]
+1579388164,,ui,message,    amazon-ebs:
+1579388164,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Search /etc/audit/rules.d for other DAC audit rules] ***
+1579388165,,ui,message,    amazon-ebs: ok: [default]
+1579388165,,ui,message,    amazon-ebs:
+1579388165,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : If existing DAC ruleset not found%!(PACKER_COMMA) use /etc/audit/rules.d/privileged.rules as the recipient for the rule] ***
+1579388165,,ui,message,    amazon-ebs: ok: [default]
+1579388165,,ui,message,    amazon-ebs:
+1579388165,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Use matched file as the recipient for the rule] ***
+1579388165,,ui,message,    amazon-ebs: skipping: [default]
+1579388165,,ui,message,    amazon-ebs:
+1579388165,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the lsetxattr rule in rules.d when on x86] ***
+1579388166,,ui,message,    amazon-ebs: changed: [default]
+1579388166,,ui,message,    amazon-ebs:
+1579388166,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the lsetxattr rule in rules.d when on x86_64] ***
+1579388167,,ui,message,    amazon-ebs: changed: [default]
+1579388167,,ui,message,    amazon-ebs:
+1579388167,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the lsetxattr rule in /etc/audit/audit.rules when on x86] ***
+1579388168,,ui,message,    amazon-ebs: changed: [default]
+1579388168,,ui,message,    amazon-ebs:
+1579388168,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the lsetxattr rule in audit.rules when on x86_64] ***
+1579388169,,ui,message,    amazon-ebs: changed: [default]
+1579388169,,ui,message,    amazon-ebs:
+1579388169,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set architecture for audit setxattr tasks] ***
+1579388169,,ui,message,    amazon-ebs: ok: [default]
+1579388169,,ui,message,    amazon-ebs:
+1579388169,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Search /etc/audit/rules.d for other DAC audit rules] ***
+1579388170,,ui,message,    amazon-ebs: ok: [default]
+1579388170,,ui,message,    amazon-ebs:
+1579388170,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : If existing DAC ruleset not found%!(PACKER_COMMA) use /etc/audit/rules.d/privileged.rules as the recipient for the rule] ***
+1579388170,,ui,message,    amazon-ebs: ok: [default]
+1579388170,,ui,message,    amazon-ebs:
+1579388170,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Use matched file as the recipient for the rule] ***
+1579388170,,ui,message,    amazon-ebs: skipping: [default]
+1579388170,,ui,message,    amazon-ebs:
+1579388170,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the setxattr rule in rules.d when on x86] ***
+1579388171,,ui,message,    amazon-ebs: changed: [default]
+1579388171,,ui,message,    amazon-ebs:
+1579388171,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the setxattr rule in rules.d when on x86_64] ***
+1579388172,,ui,message,    amazon-ebs: changed: [default]
+1579388172,,ui,message,    amazon-ebs:
+1579388172,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the setxattr rule in /etc/audit/audit.rules when on x86] ***
+1579388173,,ui,message,    amazon-ebs: changed: [default]
+1579388173,,ui,message,    amazon-ebs:
+1579388173,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the setxattr rule in audit.rules when on x86_64] ***
+1579388174,,ui,message,    amazon-ebs: changed: [default]
+1579388174,,ui,message,    amazon-ebs:
+1579388174,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set architecture for audit removexattr tasks] ***
+1579388174,,ui,message,    amazon-ebs: ok: [default]
+1579388174,,ui,message,    amazon-ebs:
+1579388174,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Search /etc/audit/rules.d for other DAC audit rules] ***
+1579388175,,ui,message,    amazon-ebs: ok: [default]
+1579388175,,ui,message,    amazon-ebs:
+1579388175,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : If existing DAC ruleset not found%!(PACKER_COMMA) use /etc/audit/rules.d/privileged.rules as the recipient for the rule] ***
+1579388175,,ui,message,    amazon-ebs: ok: [default]
+1579388175,,ui,message,    amazon-ebs:
+1579388175,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Use matched file as the recipient for the rule] ***
+1579388175,,ui,message,    amazon-ebs: skipping: [default]
+1579388175,,ui,message,    amazon-ebs:
+1579388175,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the removexattr rule in rules.d when on x86] ***
+1579388176,,ui,message,    amazon-ebs: changed: [default]
+1579388176,,ui,message,    amazon-ebs:
+1579388176,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the removexattr rule in rules.d when on x86_64] ***
+1579388177,,ui,message,    amazon-ebs: changed: [default]
+1579388177,,ui,message,    amazon-ebs:
+1579388177,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the removexattr rule in /etc/audit/audit.rules when on x86] ***
+1579388177,,ui,message,    amazon-ebs: changed: [default]
+1579388178,,ui,message,    amazon-ebs:
+1579388178,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the removexattr rule in audit.rules when on x86_64] ***
+1579388178,,ui,message,    amazon-ebs: changed: [default]
+1579388178,,ui,message,    amazon-ebs:
+1579388178,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Search for privileged commands] *************
+1579388180,,ui,message,    amazon-ebs: ok: [default]
+1579388180,,ui,message,    amazon-ebs:
+1579388180,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Search /etc/audit/rules.d for audit rule entries] ***
+1579388181,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/bin/wall)
+1579388181,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/bin/chfn)
+1579388182,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/bin/chsh)
+1579388183,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/bin/mount)
+1579388184,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/bin/chage)
+1579388184,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/bin/gpasswd)
+1579388185,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/bin/newgrp)
+1579388186,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/bin/su)
+1579388187,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/bin/umount)
+1579388188,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/bin/write)
+1579388188,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/bin/sudo)
+1579388189,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/bin/crontab)
+1579388190,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/bin/pkexec)
+1579388191,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/bin/ssh-agent)
+1579388191,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/bin/passwd)
+1579388192,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/bin/screen)
+1579388193,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/sbin/pam_timestamp_check)
+1579388194,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/sbin/unix_chkpwd)
+1579388195,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/sbin/netreport)
+1579388195,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/sbin/usernetctl)
+1579388196,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/sbin/mount.nfs)
+1579388197,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/sbin/postdrop)
+1579388198,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/sbin/postqueue)
+1579388198,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/lib/polkit-1/polkit-agent-helper-1)
+1579388199,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/libexec/utempter/utempter)
+1579388200,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/libexec/dbus-1/dbus-daemon-launch-helper)
+1579388201,,ui,message,    amazon-ebs: ok: [default] => (item=/usr/libexec/openssh/ssh-keysign)
+1579388201,,ui,message,    amazon-ebs:
+1579388201,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Overwrites the rule in rules.d] *************
+1579388201,,ui,message,    amazon-ebs:
+1579388201,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Adds the rule in rules.d] *******************
+1579388202,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/wall .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/wall'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388203,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/chfn .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/chfn'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388203,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/chsh .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/chsh'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388204,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/mount .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/mount'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388205,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/chage .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/chage'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388206,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/gpasswd .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/gpasswd'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388207,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/newgrp .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/newgrp'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388207,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/su .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/su'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388208,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/umount .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/umount'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388209,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/write .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/write'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388210,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/sudo .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/sudo'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388211,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/crontab .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/crontab'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388211,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/pkexec .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/pkexec'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388212,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/ssh-agent .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/ssh-agent'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388213,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/passwd .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/passwd'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388214,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/screen .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/screen'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388214,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/sbin/pam_timestamp_check .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/sbin/pam_timestamp_check'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388215,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/sbin/unix_chkpwd .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/sbin/unix_chkpwd'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388216,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/sbin/netreport .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/sbin/netreport'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388217,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/sbin/usernetctl .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/sbin/usernetctl'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388218,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/sbin/mount.nfs .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/sbin/mount.nfs'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388218,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/sbin/postdrop .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/sbin/postdrop'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388219,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/sbin/postqueue .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/sbin/postqueue'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388220,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/lib/polkit-1/polkit-agent-helper-1 .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/lib/polkit-1/polkit-agent-helper-1'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388221,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/libexec/utempter/utempter .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/libexec/utempter/utempter'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388222,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/libexec/dbus-1/dbus-daemon-launch-helper .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/libexec/dbus-1/dbus-daemon-launch-helper'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388223,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/libexec/openssh/ssh-keysign .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/libexec/openssh/ssh-keysign'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388223,,ui,message,    amazon-ebs:
+1579388223,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Inserts/replaces the rule in audit.rules] ***
+1579388224,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/wall .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/wall'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388225,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/chfn .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/chfn'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388226,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/chsh .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/chsh'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388227,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/mount .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/mount'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388228,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/chage .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/chage'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388229,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/gpasswd .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/gpasswd'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388230,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/newgrp .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/newgrp'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388230,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/su .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/su'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388231,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/umount .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/umount'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388232,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/write .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/write'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388233,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/sudo .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/sudo'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388233,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/crontab .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/crontab'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388234,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/pkexec .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/pkexec'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388235,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/ssh-agent .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/ssh-agent'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388236,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/passwd .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/passwd'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388237,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/bin/screen .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/bin/screen'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388237,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/sbin/pam_timestamp_check .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/sbin/pam_timestamp_check'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388238,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/sbin/unix_chkpwd .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/sbin/unix_chkpwd'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388239,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/sbin/netreport .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/sbin/netreport'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388240,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/sbin/usernetctl .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/sbin/usernetctl'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388240,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/sbin/mount.nfs .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/sbin/mount.nfs'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388241,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/sbin/postdrop .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/sbin/postdrop'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388242,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/sbin/postqueue .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/sbin/postqueue'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388243,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/lib/polkit-1/polkit-agent-helper-1 .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/lib/polkit-1/polkit-agent-helper-1'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388244,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/libexec/utempter/utempter .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/libexec/utempter/utempter'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388244,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/libexec/dbus-1/dbus-daemon-launch-helper .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/libexec/dbus-1/dbus-daemon-launch-helper'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388245,,ui,message,    amazon-ebs: changed: [default] => (item={'files': []%!(PACKER_COMMA) 'changed': False%!(PACKER_COMMA) 'msg': ''%!(PACKER_COMMA) 'examined': 2%!(PACKER_COMMA) 'invocation': {'module_args': {'excludes': None%!(PACKER_COMMA) 'paths': ['/etc/audit/rules.d']%!(PACKER_COMMA) 'file_type': 'file'%!(PACKER_COMMA) 'age': None%!(PACKER_COMMA) 'contains': '^.*path=/usr/libexec/openssh/ssh-keysign .*$'%!(PACKER_COMMA) 'recurse': False%!(PACKER_COMMA) 'age_stamp': 'mtime'%!(PACKER_COMMA) 'patterns': ['*.rules']%!(PACKER_COMMA) 'depth': None%!(PACKER_COMMA) 'get_checksum': False%!(PACKER_COMMA) 'use_regex': False%!(PACKER_COMMA) 'follow': False%!(PACKER_COMMA) 'hidden': False%!(PACKER_COMMA) 'size': None}}%!(PACKER_COMMA) 'matched': 0%!(PACKER_COMMA) 'failed': False%!(PACKER_COMMA) 'item': '/usr/libexec/openssh/ssh-keysign'%!(PACKER_COMMA) 'ansible_loop_var': 'item'})
+1579388245,,ui,message,    amazon-ebs:
+1579388245,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure PAM variable dcredit is set accordingly] ***
+1579388246,,ui,message,    amazon-ebs: changed: [default]
+1579388246,,ui,message,    amazon-ebs:
+1579388246,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure PAM variable lcredit is set accordingly] ***
+1579388247,,ui,message,    amazon-ebs: changed: [default]
+1579388247,,ui,message,    amazon-ebs:
+1579388247,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure PAM variable minlen is set accordingly] ***
+1579388248,,ui,message,    amazon-ebs: changed: [default]
+1579388248,,ui,message,    amazon-ebs:
+1579388248,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure PAM variable ucredit is set accordingly] ***
+1579388249,,ui,message,    amazon-ebs: changed: [default]
+1579388249,,ui,message,    amazon-ebs:
+1579388249,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set Password Hashing Algorithm in /etc/login.defs] ***
+1579388250,,ui,message,    amazon-ebs: ok: [default]
+1579388250,,ui,message,    amazon-ebs:
+1579388250,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set Password Hashing Algorithm in /etc/libuser.conf] ***
+1579388250,,ui,message,    amazon-ebs: ok: [default]
+1579388250,,ui,message,    amazon-ebs:
+1579388250,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Add auth pam_faillock preauth unlock_time before pam_unix.so] ***
+1579388251,,ui,message,    amazon-ebs: changed: [default] => (item=system-auth)
+1579388252,,ui,message,    amazon-ebs: changed: [default] => (item=password-auth)
+1579388252,,ui,message,    amazon-ebs:
+1579388252,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Add unlock_time argument to pam_faillock preauth] ***
+1579388253,,ui,message,    amazon-ebs: ok: [default] => (item=system-auth)
+1579388254,,ui,message,    amazon-ebs: ok: [default] => (item=password-auth)
+1579388254,,ui,message,    amazon-ebs:
+1579388254,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Add auth pam_faillock authfail unlock_interval after pam_unix.so] ***
+1579388255,,ui,message,    amazon-ebs: changed: [default] => (item=system-auth)
+1579388256,,ui,message,    amazon-ebs: changed: [default] => (item=password-auth)
+1579388256,,ui,message,    amazon-ebs:
+1579388256,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Add unlock_time argument to auth pam_faillock authfail] ***
+1579388256,,ui,message,    amazon-ebs: ok: [default] => (item=system-auth)
+1579388257,,ui,message,    amazon-ebs: ok: [default] => (item=password-auth)
+1579388257,,ui,message,    amazon-ebs:
+1579388257,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Add account pam_faillock before pam_unix.so] ***
+1579388258,,ui,message,    amazon-ebs: changed: [default] => (item=system-auth)
+1579388259,,ui,message,    amazon-ebs: changed: [default] => (item=password-auth)
+1579388259,,ui,message,    amazon-ebs:
+1579388259,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Add auth pam_faillock preauth deny before pam_unix.so] ***
+1579388260,,ui,message,    amazon-ebs: ok: [default] => (item=system-auth)
+1579388261,,ui,message,    amazon-ebs: ok: [default] => (item=password-auth)
+1579388261,,ui,message,    amazon-ebs:
+1579388261,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Add deny argument to auth pam_faillock preauth] ***
+1579388261,,ui,message,    amazon-ebs: changed: [default] => (item=system-auth)
+1579388262,,ui,message,    amazon-ebs: changed: [default] => (item=password-auth)
+1579388262,,ui,message,    amazon-ebs:
+1579388262,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Add auth pam_faillock authfail deny after pam_unix.so] ***
+1579388263,,ui,message,    amazon-ebs: ok: [default] => (item=system-auth)
+1579388264,,ui,message,    amazon-ebs: ok: [default] => (item=password-auth)
+1579388264,,ui,message,    amazon-ebs:
+1579388264,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Add deny argument to auth pam_faillock authfail] ***
+1579388265,,ui,message,    amazon-ebs: changed: [default] => (item=system-auth)
+1579388266,,ui,message,    amazon-ebs: changed: [default] => (item=password-auth)
+1579388266,,ui,message,    amazon-ebs:
+1579388266,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Add account pam_faillock before pam_unix.so] ***
+1579388266,,ui,message,    amazon-ebs: ok: [default] => (item=system-auth)
+1579388267,,ui,message,    amazon-ebs: ok: [default] => (item=password-auth)
+1579388267,,ui,message,    amazon-ebs:
+1579388267,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Do not allow users to reuse recent passwords - system-auth (change)] ***
+1579388268,,ui,message,    amazon-ebs: ok: [default]
+1579388268,,ui,message,    amazon-ebs:
+1579388268,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Do not allow users to reuse recent passwords - system-auth (add)] ***
+1579388269,,ui,message,    amazon-ebs: changed: [default]
+1579388269,,ui,message,    amazon-ebs:
+1579388269,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Prevent Log In to Accounts With Empty Password - system-auth] ***
+1579388270,,ui,message,    amazon-ebs: changed: [default]
+1579388270,,ui,message,    amazon-ebs:
+1579388270,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Prevent Log In to Accounts With Empty Password - password-auth] ***
+1579388271,,ui,message,    amazon-ebs: changed: [default]
+1579388271,,ui,message,    amazon-ebs:
+1579388271,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set Account Expiration Following Inactivity] ***
+1579388272,,ui,message,    amazon-ebs: changed: [default]
+1579388272,,ui,message,    amazon-ebs:
+1579388272,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Set Password Maximum Age] *******************
+1579388272,,ui,message,    amazon-ebs: changed: [default]
+1579388273,,ui,message,    amazon-ebs:
+1579388273,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Test for existence /boot/grub2/grub.cfg] ****
+1579388273,,ui,message,    amazon-ebs: ok: [default]
+1579388273,,ui,message,    amazon-ebs:
+1579388273,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure group owner 0 on /boot/grub2/grub.cfg] ***
+1579388274,,ui,message,    amazon-ebs: ok: [default]
+1579388274,,ui,message,    amazon-ebs:
+1579388274,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Test for existence /boot/grub2/grub.cfg] ****
+1579388275,,ui,message,    amazon-ebs: ok: [default]
+1579388275,,ui,message,    amazon-ebs:
+1579388275,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Ensure owner 0 on /boot/grub2/grub.cfg] *****
+1579388276,,ui,message,    amazon-ebs: ok: [default]
+1579388276,,ui,message,    amazon-ebs:
+1579388276,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Deduplicate values from /etc/ssh/sshd_config] ***
+1579388277,,ui,message,    amazon-ebs: ok: [default]
+1579388277,,ui,message,    amazon-ebs:
+1579388277,,ui,message,    amazon-ebs: TASK [ansible-role-rhel7-pci-dss : Insert correct line to /etc/ssh/sshd_config] ***
+1579388278,,ui,message,    amazon-ebs: changed: [default]
+1579388278,,ui,message,    amazon-ebs:
+1579388278,,ui,message,    amazon-ebs: PLAY RECAP *********************************************************************
+1579388278,,ui,message,    amazon-ebs: default                    : ok=187  changed=95   unreachable=0    failed=0    skipped=24   rescued=0    ignored=1
+1579388278,,ui,message,    amazon-ebs:
+1579388278,,ui,say,==> amazon-ebs: Provisioning with shell script: ./provisioners/scripts/cleanup.sh
+1579388278,,ui,error,==> amazon-ebs: + sudo yum erase -y ansible
+1579388278,,ui,message,    amazon-ebs: Loaded plugins: fastestmirror
+1579388278,,ui,message,    amazon-ebs: Resolving Dependencies
+1579388278,,ui,message,    amazon-ebs: --> Running transaction check
+1579388278,,ui,message,    amazon-ebs: ---> Package ansible.noarch 0:2.9.2-1.el7 will be erased
+1579388279,,ui,message,    amazon-ebs: --> Finished Dependency Resolution
+1579388279,,ui,message,    amazon-ebs:
+1579388279,,ui,message,    amazon-ebs: Dependencies Resolved
+1579388279,,ui,message,    amazon-ebs:
+1579388279,,ui,message,    amazon-ebs: ================================================================================
+1579388279,,ui,message,    amazon-ebs:  Package           Arch             Version               Repository       Size
+1579388279,,ui,message,    amazon-ebs: ================================================================================
+1579388279,,ui,message,    amazon-ebs: Removing:
+1579388279,,ui,message,    amazon-ebs:  ansible           noarch           2.9.2-1.el7           @epel           104 M
+1579388279,,ui,message,    amazon-ebs:
+1579388279,,ui,message,    amazon-ebs: Transaction Summary
+1579388279,,ui,message,    amazon-ebs: ================================================================================
+1579388279,,ui,message,    amazon-ebs: Remove  1 Package
+1579388279,,ui,message,    amazon-ebs:
+1579388279,,ui,message,    amazon-ebs: Installed size: 104 M
+1579388279,,ui,message,    amazon-ebs: Downloading packages:
+1579388279,,ui,message,    amazon-ebs: Running transaction check
+1579388279,,ui,message,    amazon-ebs: Running transaction test
+1579388279,,ui,message,    amazon-ebs: Transaction test succeeded
+1579388279,,ui,message,    amazon-ebs: Running transaction
+1579388280,,ui,message,    amazon-ebs:   Erasing    : ansible-2.9.2-1.el7.noarch                                   1/1
+1579388280,,ui,message,    amazon-ebs:   Verifying  : ansible-2.9.2-1.el7.noarch                                   1/1
+1579388280,,ui,message,    amazon-ebs:
+1579388280,,ui,message,    amazon-ebs: Removed:
+1579388280,,ui,message,    amazon-ebs:   ansible.noarch 0:2.9.2-1.el7
+1579388280,,ui,message,    amazon-ebs:
+1579388280,,ui,message,    amazon-ebs: Complete!
+1579388280,,ui,say,==> amazon-ebs: Stopping the source instance...
+1579388280,,ui,message,    amazon-ebs: Stopping instance
+1579388280,,ui,say,==> amazon-ebs: Waiting for the instance to stop...
+1579388311,,ui,say,==> amazon-ebs: Deregistered AMI hardened-centos7-ami-2020-01-18%!(PACKER_COMMA) id: ami-0afd7e622a76c53b3
+1579388311,,ui,say,==> amazon-ebs: Creating AMI hardened-centos7-ami-2020-01-18 from instance i-05da2b9e9b192d171
+1579388312,,ui,message,    amazon-ebs: AMI: ami-00ed37f725b2c71ff
+1579388312,,ui,say,==> amazon-ebs: Waiting for AMI to become ready...
+1579388905,,ui,say,==> amazon-ebs: Adding tags to AMI (ami-00ed37f725b2c71ff)...
+1579388905,,ui,say,==> amazon-ebs: Tagging snapshot: snap-033d9c8131fe18cf4
+1579388905,,ui,say,==> amazon-ebs: Tagging snapshot: snap-009a22b17d98acf28
+1579388905,,ui,say,==> amazon-ebs: Creating AMI tags
+1579388905,,ui,message,    amazon-ebs: Adding tag: "Name": "hardened-centos7-ami-2020-01-18"
+1579388905,,ui,say,==> amazon-ebs: Creating snapshot tags
+1579388906,,ui,say,==> amazon-ebs: Terminating the source AWS instance...
+1579388921,,ui,say,==> amazon-ebs: Cleaning up any extra volumes...
+1579388922,,ui,say,==> amazon-ebs: No volumes to clean up%!(PACKER_COMMA) skipping
+1579388922,,ui,say,==> amazon-ebs: Deleting temporary security group...
+1579388922,,ui,say,==> amazon-ebs: Deleting temporary keypair...
+1579388922,,ui,say,Build 'amazon-ebs' finished.
+1579388922,,ui,say,\n==> Builds finished. The artifacts of successful builds are:
+1579388922,amazon-ebs,artifact-count,1
+1579388922,amazon-ebs,artifact,0,builder-id,mitchellh.amazonebs
+1579388922,amazon-ebs,artifact,0,id,us-east-1:ami-00ed37f725b2c71ff
+1579388922,amazon-ebs,artifact,0,string,AMIs were created:\nus-east-1: ami-00ed37f725b2c71ff\n
+1579388922,amazon-ebs,artifact,0,files-count,0
+1579388922,amazon-ebs,artifact,0,end
+1579388922,,ui,say,--> amazon-ebs: AMIs were created:\nus-east-1: ami-00ed37f725b2c71ff\n
