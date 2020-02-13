@@ -1,2 +1,0 @@
-1579388889,,ui,error,could not tell whether packer-build-centos7-nginx.json is hcl enabled: stat packer-build-centos7-nginx.json: no such file or directory
-1579388889,,ui,say,\n==> Builds finished but no artifacts were created.

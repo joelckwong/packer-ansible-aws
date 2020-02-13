@@ -2,7 +2,7 @@
     "variables": {
         "aws_access_key": "",
         "aws_secret_key": "",
-        "ami_name": "hardened-centos7-ami-{{isotime \"2006-01-02\"}}",
+        "ami_name": "centos7-pci-dss-{{isotime \"2006-01-02\"}}",
         "aws_region": "us-east-1",
         "ssh_username": "centos",
         "vpc_id": "",
@@ -74,7 +74,12 @@
         },
         {
             "type": "ansible",
-            "playbook_file": "./provisioners/ansible/setup-server.yml"
+            "playbook_file": "./provisioners/ansible/pci-dss.yml"
+        },
+	{
+            "type": "shell",
+            "script": "./provisioners/scripts/oscap-pci-dss.sh",
+            "valid_exit_codes": [ 0, 1, 2 ]
         },
         {
             "type": "shell",

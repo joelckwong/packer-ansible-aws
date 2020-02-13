@@ -1,6 +1,6 @@
 ---
 - name: Centos7 deployment playbook
-  hosts: 'all'
+  hosts: all
   become: yes
   become_method: sudo
   tasks:
@@ -16,7 +16,7 @@
 
     - name: Install basic packages
       yum:
-        name: ['epel-release', 'firewalld', 'vim', 'bash-completion', 'htop', 'tmux', 'screen', 'telnet', 'tree', 'wget', 'curl', 'git', 'python-firewall']
+        name: ['firewalld', 'bash-completion', 'tree', 'wget']
         state: present
 
     - name: Start and enable firewalld
@@ -26,7 +26,7 @@
         enabled: yes
 
 - name: Run ansible-role-rhel7-pci-dss role
-  hosts: 'all'
+  hosts: all
   become: yes
   become_method: sudo
   roles:
