@@ -2,7 +2,7 @@
     "variables": {
         "aws_access_key": "",
         "aws_secret_key": "",
-        "ami_name": "centos7-pci-dss-{{isotime \"2006-01-02\"}}",
+        "ami_name": "centos7-pci-dss-{{isotime \"2006-01-02\"}}-{{timestamp}}",
         "aws_region": "us-east-1",
         "ssh_username": "centos",
         "vpc_id": "",
