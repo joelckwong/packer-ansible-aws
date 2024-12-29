@@ -74,7 +74,7 @@
         },
         {
             "type": "ansible",
-            "playbook_file": "./provisioners/ansible/rhel8-stig-latest/rhel8-playbook-stig.yml"
+            "playbook_file": "./provisioners/ansible/rhel8-playbook-stig.yml"
         },
 	{
             "type": "shell",
