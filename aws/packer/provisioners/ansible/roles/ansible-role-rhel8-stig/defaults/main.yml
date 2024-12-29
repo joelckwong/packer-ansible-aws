@@ -700,7 +700,7 @@ selinux_state: true
 service_auditd_enabled: true
 service_autofs_disabled: true
 service_debug_shell_disabled: true
-service_fapolicyd_enabled: true
+service_fapolicyd_enabled: false
 service_firewalld_enabled: true
 service_kdump_disabled: true
 service_rngd_enabled: true
