@@ -732,7 +732,7 @@ sssd_certificate_verification: true
 sssd_enable_smartcards: true
 sssd_offline_cred_expiration: true
 sudo_remove_no_authenticate: true
-sudo_remove_nopasswd: true
+sudo_remove_nopasswd: false
 sudo_require_reauthentication: true
 sudoers_default_includedir: true
 sudoers_validate_passwd: true
