@@ -72,10 +72,6 @@
             "type": "shell",
             "script": "./provisioners/scripts/bootstrap.sh"
         },
-        {
-            "type": "ansible",
-            "playbook_file": "./provisioners/ansible/rhel8-playbook-stig.yml"
-        },
 	{
             "type": "shell",
             "script": "./provisioners/scripts/oscap-stig.sh",
