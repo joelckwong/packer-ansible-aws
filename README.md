@@ -1,8 +1,8 @@
 cd ~/repos
 
-git clone https://github.com/joelckwong/packer-ansible-aws.git
+git clone https://github.com/joelckwong/packer-aws.git
 
-cd packer-ansible-aws/aws/packer
+cd packer-aws/aws/packer
 
 packer build -machine-readable packer-rhel8-stig.json | tee ~/packer-rhel8-stig.out
 
