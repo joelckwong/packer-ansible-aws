@@ -36,13 +36,6 @@
           "encrypted": true,
           "volume_size": 64,
           "volume_type": "gp3"
-        },
-        {
-          "delete_on_termination": true,
-          "device_name": "/dev/sdb",
-          "encrypted": true,
-          "volume_size": 64,
-          "volume_type": "gp3"
         }
         ],
         "run_tags": {
@@ -52,19 +45,7 @@
             "Name": "{{user `ami_name`}}"
         }
     }],
-    "provisioners": [{
-            "type": "shell",
-            "inline": [
-		"sudo fdisk -l",
-        	"echo -e 'o\nn\np\n1\n\n\nw' | sudo fdisk /dev/nvme1n1",
-        	"sleep 2",
-        	"sudo mkfs.xfs /dev/nvme1n1p1",
-        	"echo '/dev/nvme1n1p1 /opt xfs defaults 1 2' | sudo tee -a /etc/fstab",
-        	"sudo mount /opt",
-        	"sudo restorecon -R -v /opt"
-		]
-        },
-        {
+    "provisioners": [
             "type": "shell",
             "inline": "while [ ! -f /var/lib/cloud/instance/boot-finished ]; do echo 'Waiting for cloud-init...'; sleep 1; done"
         },
